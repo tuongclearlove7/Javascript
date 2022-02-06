@@ -1,0 +1,7 @@
+- b1: 
+div1 = $(element(div1)).offset().top = display = block - ini
+window.offset khi moi load trang = 0px
+window.offset < div1 
+- b2 
+window.offset >  div1 
+div1 = display = flex
