@@ -325,7 +325,7 @@ function handleMessage(sender_psid, received_message) {
       }
     }
     if(received_message.text==="#Tường"){
-      response = {"text": `${received_message.text} : tuongdepzai`,
+      response = {"text": `${received_message.text} : Trần Thế Tường nick name Clearlove7`,
       }
     }
 
