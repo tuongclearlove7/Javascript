@@ -324,6 +324,14 @@ function handleMessage(sender_psid, received_message) {
       response = {"text": `${received_message.text} : Trường Đại học Duy Tân là một trường đại học tư thục đầu tiên tại miền Trung Việt Nam, được thành lập năm 1994. Trường có mặt trong một số bảng xếp hạng đại học như: QS Rankings, CWUR, URAP, Nature Index, ShanghaiRanking Consultancy. `,
       }
     }
+switch(received_message.text){
+     case "pass":
+     response={
+      "text":"đưa qua ,qua,cho qua",
+}
+     break;
+}
+
     if(received_message.text==="#Tường"){
       response = {"text": `${received_message.text} : Tường nick name Clearlove7`,
       }
