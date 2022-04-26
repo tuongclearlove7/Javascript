@@ -483,7 +483,7 @@ function handleMessage(sender_psid, received_message) {
     }
     switch(received_message.text){
       case"#newton":
-      case"Newton":
+      case"Newton"://
           response={"text": a.info.newton,}
           break;
       case"hacker":
