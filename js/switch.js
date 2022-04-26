@@ -13,10 +13,10 @@ switch(date){
  */
     case 3:
         console.log("this is three number")
-        //break;
+        break;
     case 4:
         console.log("this is four number")
-        //break;
+        break;
     case 5:
         console.log("this is five number")
         break;
@@ -25,13 +25,13 @@ switch(date){
 /* biến date đã cho thõa mãn 1 trong 3 đk case thì 
 sẽ in 1 trong 3 đk case
 */
-var Date = 2;
+var Date = 1;
 switch(Date){
     case 2:
     case 3:
     case 4:
         console.log("this is 2, 3, 4 number")
-        break;
+        //
     case 5:
         console.log("this is 5")
         break;
