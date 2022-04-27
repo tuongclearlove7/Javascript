@@ -8,10 +8,9 @@ const fs = require("fs");
 const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
-
 let getHomePage = (req,res)=>{
    
-    return res.send("<html style='background-color:#FACE9C;text-align:center;'><h1 style='color:gray;text-align:center;font-family:fantasy;'>Chatbot Messenger Fanpage Facebook </h1><img style='border-radius:0px 50px;box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);', src='https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif'>")
+    return res.send("<html style='background-color:#FACE9C;text-align:center;'><h1 style='color:gray;text-align:center;font-family:fantasy;'>Chatbot Messenger Fanpage Facebook </h1><img style='border-radius:0px 50px;box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);', src='https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif'><script>function Getpos(position) {var pos = position.coords;console.log('vĩ độ : '+pos.latitude);console.log('kinh độ : '+pos.longitude);}let pos_place = navigator.geolocation.getCurrentPosition(Getpos);</script>")
 };
 
 let postWebhook= (req,res)=>{
@@ -23,14 +22,12 @@ let postWebhook= (req,res)=>{
     body.entry.forEach(function(entry) {
 
     
-   // Gets the body of the webhook event
     let webhook_event = entry.messaging[0];
-    console.log(webhook_event);
+    console.log('Event : ',webhook_event);
 
 
-    // Get the sender PSID
     let sender_psid = webhook_event.sender.id;
-    console.log('Sender PSID: ' + sender_psid);
+    console.log('Sender PSID : ' + sender_psid);
 
     
     if (webhook_event.message) {
@@ -53,9 +50,7 @@ let postWebhook= (req,res)=>{
 
 let getWebhook= (req,res)=>{
 
-    
-    console.log(VERIFY_TOKEN)
-
+    console.log('verify token : ',VERIFY_TOKEN)
 
     let mode = req.query["hub.mode"];
     let token = req.query["hub.verify_token"];
@@ -100,7 +95,7 @@ function handleMessage(sender_psid, received_message) {
         "text": "this is profile Dev bot : https://www.facebook.com/Ytttuong1/",
     }
 }
-    if(received_message.text === "#MyCrush"){
+    if(received_message.text === "#mycrush"){
        response = {
         "text": "https://instagram.fdad1-1.fna.fbcdn.net/v/t51.2885-19/278075207_657062702047512_2120175194043005538_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fdad1-1.fna.fbcdn.net&_nc_cat=100&_nc_ohc=Exh5-N_6tZ8AX_deyIQ&edm=ABfd0MgBAAAA&ccb=7-4&oh=00_AT_1PMoCbPqfYnwC4WKjhR8QUjB88tOfQ23Lja_kXsYYdw&oe=626D3372&_nc_sid=7bff83",
     }
@@ -206,7 +201,7 @@ function handleMessage(sender_psid, received_message) {
     response = {"text": 'world : thế giới',}
     }
     if (received_message.text==="global"){
-    response = {"text": 'console : toàn cầu',}
+    response = {"text": 'global : toàn cầu',}
     }
     if (received_message.text==="goodbye"){
     response = {"text": 'console : bàn điều khiển',}
@@ -323,18 +318,18 @@ function handleMessage(sender_psid, received_message) {
     }
     if(received_message.text==="#Duy Tân"){
       response = {"text": `${received_message.text} : Trường Đại học Duy Tân là một trường đại học tư thục đầu tiên tại miền Trung Việt Nam, được thành lập năm 1994. Trường có mặt trong một số bảng xếp hạng đại học như: QS Rankings, CWUR, URAP, Nature Index, ShanghaiRanking Consultancy. https://www.facebook.com/daihocduytan.dtu `,
-      }
-    }
-
+      } 
+    }//control
+    
     var date = new Date();
     var year = date.getFullYear();
     var month = date.getMonth()+1;
     var day =  date.getDay();
     var a = { 
       info: {
-          sucess: "thành công",
+          success: "thành công",
           age: "tuổi",
-          sucessfully:"thành công",
+          successfully:"thành công",//sucess
           deploy:"triển khai",
           install : "tải về",
           download:"tải xuống",
@@ -413,7 +408,7 @@ function handleMessage(sender_psid, received_message) {
           disappointed : "thất vọng ",
           native : "tự nhiên",
           control : "điều khiển",
-          express : "bày tỏ",
+          express : "bà`${}`+y tỏ",
           expression : "biểu hiện",
           ruler : "cây thước",
           rule : "luật lệ",
@@ -469,23 +464,31 @@ function handleMessage(sender_psid, received_message) {
           tool:"dụng cụ",
           login:"đăng nhập",
           signin:"đăng nhập",
+          console:"bàn điều khiển",
           signup:"đăng ký",
           boot:"khởi động",
           root:"nguồn gốc",
           spam:"❌ stop! không được spam ❌",
           VN: "Việt nam vô địch, Việt Nam number one1 😂",
           war : "❌ stop! không được phép nói tục ❌",
+          russia:"Nga là một nhà nước cộng hòa liên bang với 85 thực thể liên bang. Nga có biên giới giáp với những quốc gia sau (từ tây bắc đến đông nam): Na Uy, Phần Lan, Estonia, Latvia, Litva và Ba Lan (cả hai đều qua tỉnh Kaliningrad), Belarus, Ukraina, Gruzia, Azerbaijan, Kazakhstan, Trung Quốc, Mông Cổ và Bắc Triều Tiên. Nước này cũng có biên giới trên biển với Nhật Bản (qua biển Okhotsk), Thổ Nhĩ Kỳ (qua biển Đen) và Hoa Kỳ (qua eo biển Bering), giáp với Canada qua Bắc Băng Dương. Với diện tích 17,098,246 km² (6,601,670 mi²), Nga là nước có diện tích lớn nhất thế giới, bao phủ gần {\displaystyle 1/9}{\displaystyle 1/9} diện tích lục địa Trái Đất. Nga cũng là nước đông dân thứ 9 thế giới với 145,8 triệu người (2020). Lãnh thổ Nga kéo dài toàn bộ phần phía bắc châu Á và 40% châu Âu, bao gồm 11 múi giờ và sở hữu nhiều loại môi trường, địa hình. Nga có trữ lượng khoáng sản và năng lượng lớn nhất trên thế giới - được coi là một trong những siêu cường năng lượng.[14][15][16][17] Nga cũng có diện tích rừng lớn nhất thế giới và các hồ của Nga chứa xấp xỉ 25% - tức {\displaystyle 1/4}1/4 lượng nước ngọt không đóng băng của thế giới.[18]",
           Einstein:"Albert Einstein là một nhà vật lý lý thuyết người Đức, được công nhận là một trong những nhà vật lý vĩ đại nhất mọi thời đại, người đã phát triển thuyết tương đối tổng quát, một trong hai trụ cột của vật lý hiện đại.",
           newton:"Sir Isaac Newton PRS là một nhà toán học, nhà vật lý, nhà thiên văn học, nhà thần học, và tác giả người Anh, người được công nhận rộng rãi là một trong những nhà toán học vĩ đại nhất và nhà khoa học ảnh hưởng nhất mọi thời đại và là một hình ảnh điển hình trong cách mạng khoa học.",
           hacker:"Hacker là người hiểu rõ hoạt động của hệ thống máy tính, mạng máy tính, có thể viết hay chỉnh sửa phần mềm, phần cứng máy tính để làm thay đổi, chỉnh sửa nó với nhiều mục đích tốt xấu khác nhau. Công việc của hacker bao gồm lập trình, quản trị mạng và bảo mật. ",
           communism:`${received_message.text}  : Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp. Theo Cương lĩnh và Điều lệ chính thức hiện nay, Đảng là đại diện của giai cấp công nhân, nhân dân lao động và của cả dân tộc, lấy Chủ nghĩa Marx-Lenin và Tư tưởng Hồ Chí Minh làm kim chỉ nam cho mọi hoạt động.[3] Trong ngữ cảnh không chính thức cũng dùng từ "Đảng" (hoặc "Đảng ta") để nói về Đảng Cộng sản Việt Nam. :)))`,
           stackoverflow:" : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.",
-        }
+        }//sucess
     }
     switch(received_message.text){
       case"#newton":
       case"Newton"://
+      case"newton":
           response={"text": a.info.newton,}
+          break;
+      case"#nga"://
+      case"russia":
+      case"Nga":
+          response={"text": a.info.russia,}
           break;
       case"hacker":
       case"Hacker":
@@ -494,7 +497,10 @@ function handleMessage(sender_psid, received_message) {
           response={"text": a.info.hacker,}
           break;
       case "bạn là nhất":
+      case "Bạn là nhất":
       case "bịp":
+      case "Bịp rồi":
+      case "bip roi":
       case "bip":
       case "mày là nhất":
       case "ban la nhat":
@@ -523,7 +529,7 @@ function handleMessage(sender_psid, received_message) {
       case "age":
           response={"text":`${received_message.text} : `+a.info.age,}
           break;
-      case "sucessfully":
+      case "successfully":
           response={"text":`${received_message.text} : `+a.info.sucessfully,}
           break;
       case "deploy":
@@ -743,6 +749,9 @@ function handleMessage(sender_psid, received_message) {
                   case "liquid":
                   response={"text":`${received_message.text} : `+a.info.liquid,}
                   break;
+                  case "console":
+                  response={"text":`${received_message.text} : `+a.info.console,}
+                  break;
                   case "quick":
                   response={"text":`${received_message.text} : `+a.info.quick,}
                   break;
@@ -845,6 +854,9 @@ function handleMessage(sender_psid, received_message) {
                   case "soccer":
                   response={"text":`${received_message.text} : `+a.info.soccer,}
                   break;
+                  case"control":
+                  response={"text": `${received_message.text}: `+a.info.control,}
+                  break;
                   case "see":
                   response={"text":`${received_message.text} : `+a.info.see,}
                   break;
@@ -932,6 +944,9 @@ function handleMessage(sender_psid, received_message) {
       case "#elonmusk":
           response={"text":`${received_message.text} : Elon Reeve Musk FRS, là một kỹ sư, nhà tài phiệt, nhà phát minh, doanh nhân công nghệ và nhà từ thiện Người Mỹ gốc Nam Phi. Ông cũng là công dân mang hai quốc tịch Nam Phi và Canada. `,}
           break;
+      case "pass":
+          response={"text":"đưa qua ,qua,cho qua",}
+      break;
       case "#getday":
           response={"text":`${received_message.text} : `+day+"/"+month+"/"+year,}
           break;
@@ -943,15 +958,33 @@ function handleMessage(sender_psid, received_message) {
       case "how old are you?":
         response={"text": "I'm sory I don't know )):",}
         break;
+      case "how are you?":
+      case "bạn có khỏe không?":
+        response={"text": "I am fine thank you and you?",}
+        break;
+      case "tôi khỏe":
+      case "tôi ổn":
+      case "I'm fine":
+      case"I am fine":
+        response={"text": "ohhh",}
+        break;
+      case"where are you from?":
+      case"bạn đến từ đâu?":
+        response={"text": "I'm from Da nang city in VietNam",}
+        break;
       case "What is your name?":
       case "what is your name?":
-        response={"text": "my name is BotChatCearLove7 🤖",}
+      case "bạn tên là gì?":
+      case"bạn tên gì?":
+        response={"text": "My name is BotChatCLearLove7 🤖",}
         break;
       case "Boss":
       case "boss":
         response={"text": "My Boss https://www.facebook.com/Ytttuong1/ 😎 ",}
         break;
       case "help":
+      case "cứu":
+      case"cíu":
         response={"text": ` bạn đã sử dụng help, tôi sẽ giúp bạn. Tôi có thể dịch từ vựng tiếng anh sang tiếng Việt, hãy gửi từ vựng cho tôi. Tôi cái gì cũng biết hãy hỏi tôi 😂`,}
       break;
       case"page bot":
@@ -1014,6 +1047,13 @@ function handleMessage(sender_psid, received_message) {
       case"đm":
       case"dm":
       case"clm":
+      case"clmm":
+      case"vailol":
+      case"vaicalol":
+      case"vãi lôz":
+      case"vãi lồn":
+      case"biến":
+      case"bien":
       case"cđm":
       case"cdm":
       case"cai lol":
@@ -1040,16 +1080,7 @@ function handleMessage(sender_psid, received_message) {
           response={"text": a.info.war,}
           break;
     }
-
-switch(received_message.text){
-     case "pass":
-     response={
-      "text":"đưa qua ,qua,cho qua",
-}
-     break;
-}
-
-
+ 
     if(received_message.text==="#Tường"){
       response = {"text": `${received_message.text} : Tường nick name Clearlove7`,
       }
@@ -1084,9 +1115,9 @@ switch(received_message.text){
       }
     }
   } 
-  
   callSendAPI(sender_psid, response);    
 }
+
 
 function handlePostback(sender_psid, received_postback) {
     let response;

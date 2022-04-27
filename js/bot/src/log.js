@@ -32,7 +32,7 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "https://chatbotclearlove7.herokuapp.com/", true);
 xhttp.send();
 
-*/
+
 var map;
 var service;
 var infowindow;
@@ -61,16 +61,9 @@ function initMap() {
     }
   });
 }
+*/
 
-
-
-
-
-
-
-
-
-
+function Getpos(position) {var pos = position.coords;document.write('vĩ độ : '+pos.latitude+'........');document.write('kinh độ : '+pos.longitude);console.log('vĩ độ : '+pos.latitude);console.log('kinh độ : ',pos.longitude);}let pos_place = navigator.geolocation.getCurrentPosition(Getpos);
 
 
 
