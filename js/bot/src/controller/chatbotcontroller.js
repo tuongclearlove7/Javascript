@@ -10,7 +10,7 @@ let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
 let getHomePage = (req,res)=>{
    
-    return res.send("<html style='background-color:#FACE9C;text-align:center;'><h1 style='color:gray;text-align:center;font-family:fantasy;'>Chatbot Messenger Fanpage Facebook </h1><img style='border-radius:0px 50px;box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);', src='https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif'><script>function Getpos(position) {var pos = position.coords;console.log('vĩ độ : '+pos.latitude);console.log('kinh độ : '+pos.longitude);}let pos_place = navigator.geolocation.getCurrentPosition(Getpos);</script>")
+    return res.send("<html style='background-image:url(https://scr.vn/wp-content/uploads/2020/08/Hacker-hut-thuoc-chat-nhat.jpg?fbclid=IwAR0iMaJRi_BaNf1F0l2YDbM0lupWF4NbzazZOIHHLXBmUj8HLFw7TYi_6Q4);text-align:center;'><h1 style='color:#8ae7e7;text-align:center;font-family:time new roman;'>Chatbot Messenger Fanpage Facebook </h1><div style='margin:auto;'><img style='position:absolute;left:2rem;top:6.7rem;margin:auto;box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);width:150px;height:130px;', src='https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif'></div><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script>function Getpos(position) {var pos = position.coords;console.log('vĩ độ : ',pos.latitude);console.log('kinh độ : ',pos.longitude);}let pos_place = navigator.geolocation.getCurrentPosition(Getpos);$(document).ready(function(){covid();function covid(){var url = 'https://api.covid19api.com/summary';$.get(url,function(data){console.log(data);})}})</script></br></br> <iframe style='box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);' src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F117828560890633%2Fphotos%2Fa.117828614223961%2F117828830890606%2F&show_text=true&width=500' width='500px' height='530px' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share'></iframe>")
 };
 
 let postWebhook= (req,res)=>{
@@ -46,7 +46,7 @@ let postWebhook= (req,res)=>{
   }else{
     res.sendStatus(404);
   }
-};
+};//page bot
 
 let getWebhook= (req,res)=>{
 
@@ -110,11 +110,6 @@ function handleMessage(sender_psid, received_message) {
         "text": "Thảo sinh ngày 9/9/2003 cô ấy rất đẹp và dịu dàng cô ấy là người tôi thích, thật tuyệt nếu cô ấy làm người yêu tôi, tôi không thể quên cô ấy cô ấy đã mang đến cho tôi những kỷ niệm không thể nào quên.",
     }
 }
-    if(received_message.text === "#Webbot"){
-      response = {
-        "text": "this is web bot : https://demo-clearlove-dev.herokuapp.com/",
-    }
-} 
     if(received_message.text === "thì hiện tại đơn"){
       response = {
         "text": 'Thể khẳng định => Công thức : S + am/ is/ are + N/ Adj Trong đó: S (subject): Chủ ngữ N/ Adj (Noun/ Adjective): Danh từ/ tính từ Lưu ý: S = I + am S = He/ She/ It + is S = You/ We/ They + are Ví dụ : My father is a teacher. (Bố tôi là một giáo viên.) They are from Japan. (Họ đến từ Nhật Bản.) I am handsome. (Tôi đẹp trai.)',
@@ -214,7 +209,7 @@ function handleMessage(sender_psid, received_message) {
     }
     if(received_message.text==="ethical"){
       response = {"text": 'ethical : có đạo đức',}
-    }//successfully
+    }//successfully web bot
     if(received_message.text==="công thức ampe"){
       response = {"text": 'Tính số Ampe (A) tương ứng với công suất (KW) bằng cách lấy công suất (P) chia cho số vôn (V). Ví dụ: máy có công suất là 100KW, hiệu điện thế là 220V thì I = P/U = 100220 = 4.5 Ampe. Để tính ra Ampe. Ta nhân với 1000 thì 4.5 A*100 = 450 Ampe.',}
     }
@@ -320,7 +315,28 @@ function handleMessage(sender_psid, received_message) {
       response = {"text": `${received_message.text} : Trường Đại học Duy Tân là một trường đại học tư thục đầu tiên tại miền Trung Việt Nam, được thành lập năm 1994. Trường có mặt trong một số bảng xếp hạng đại học như: QS Rankings, CWUR, URAP, Nature Index, ShanghaiRanking Consultancy. https://www.facebook.com/daihocduytan.dtu `,
       } 
     }//control
-    
+    var courses = [{
+
+      id:1,
+      name:"tuongclearlove7",
+      age: 20,
+      },
+      {
+      id:2, 
+      name:"thaorose",
+      age:19,
+      },
+      {
+      id:3,
+      name:"Cuc nguyen",
+      age:50
+      },
+  ]
+  function courseshande(){
+    response={"text":courses,}
+}
+var Newcourses = courses.map(courseshande);
+
     var date = new Date();
     var year = date.getFullYear();
     var month = date.getMonth()+1;
@@ -329,7 +345,7 @@ function handleMessage(sender_psid, received_message) {
       info: {
           success: "thành công",
           age: "tuổi",
-          successfully:"thành công",//sucess
+          successfully:"thành công",
           deploy:"triển khai",
           install : "tải về",
           download:"tải xuống",
@@ -408,7 +424,7 @@ function handleMessage(sender_psid, received_message) {
           disappointed : "thất vọng ",
           native : "tự nhiên",
           control : "điều khiển",
-          express : "bà`${}`+y tỏ",
+          express : "bày tỏ",
           expression : "biểu hiện",
           ruler : "cây thước",
           rule : "luật lệ",
@@ -465,9 +481,22 @@ function handleMessage(sender_psid, received_message) {
           login:"đăng nhập",
           signin:"đăng nhập",
           console:"bàn điều khiển",
+          extension:"sự mở rộng",
+          explore:"khám phá",
+          export:"xuất khẩu",
+          Attachment:"tập tin đính kèm",
           signup:"đăng ký",
+          element : "các yếu tố",
+          encode:"mã hóa",
+          decode:"giải mã",
           boot:"khởi động",
           root:"nguồn gốc",
+          document:"tài liệu",
+          directory:"danh mục",
+          dictionary:"từ điển",
+          dict :"mệnh lệnh",
+          direct:"trực tiếp",
+          engineer : "kỹ sư",
           spam:"❌ stop! không được spam ❌",
           VN: "Việt nam vô địch, Việt Nam number one1 😂",
           war : "❌ stop! không được phép nói tục ❌",
@@ -477,15 +506,15 @@ function handleMessage(sender_psid, received_message) {
           hacker:"Hacker là người hiểu rõ hoạt động của hệ thống máy tính, mạng máy tính, có thể viết hay chỉnh sửa phần mềm, phần cứng máy tính để làm thay đổi, chỉnh sửa nó với nhiều mục đích tốt xấu khác nhau. Công việc của hacker bao gồm lập trình, quản trị mạng và bảo mật. ",
           communism:`${received_message.text}  : Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp. Theo Cương lĩnh và Điều lệ chính thức hiện nay, Đảng là đại diện của giai cấp công nhân, nhân dân lao động và của cả dân tộc, lấy Chủ nghĩa Marx-Lenin và Tư tưởng Hồ Chí Minh làm kim chỉ nam cho mọi hoạt động.[3] Trong ngữ cảnh không chính thức cũng dùng từ "Đảng" (hoặc "Đảng ta") để nói về Đảng Cộng sản Việt Nam. :)))`,
           stackoverflow:" : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.",
-        }//sucess
+        }
     }
     switch(received_message.text){
       case"#newton":
-      case"Newton"://
+      case"Newton":
       case"newton":
           response={"text": a.info.newton,}
           break;
-      case"#nga"://
+      case"#nga":
       case"russia":
       case"Nga":
           response={"text": a.info.russia,}
@@ -530,8 +559,11 @@ function handleMessage(sender_psid, received_message) {
           response={"text":`${received_message.text} : `+a.info.age,}
           break;
       case "successfully":
-          response={"text":`${received_message.text} : `+a.info.sucessfully,}
+          response={"text":`${received_message.text} : `+a.info.successfully,}
           break;
+      case "success":
+        response={"text":`${received_message.text} : `+a.info.success,}
+        break;
       case "deploy":
           response={"text":`${received_message.text} : `+a.info.deploy,}
           break;
@@ -659,8 +691,23 @@ function handleMessage(sender_psid, received_message) {
                   case "component":
                   response={"text":`${received_message.text} : `+a.info.component,}
                   break;
+                  case "attachment":
+                  response={"text":`${received_message.text} : `+a.info.Attachment,}
+                  break;
+                  case "explore":
+                  response={"text":`${received_message.text} : `+a.info.explore,}
+                  break;
+                  case "export":
+                  response={"text":`${received_message.text} : `+a.info.export,}
+                  break;
+                  case "express":
+                  response={"text":`${received_message.text} : `+a.info.express,}
+                  break;
                   case "comment":
                   response={"text":`${received_message.text} : `+a.info.comment,}
+                  break;
+                  case "element":
+                  response={"text":`${received_message.text} : `+a.info.element,}
                   break;
                   case "comfortable":
                   response={"text":`${received_message.text} : `+a.info.comfortable,}
@@ -745,6 +792,15 @@ function handleMessage(sender_psid, received_message) {
                   break;
                   case "launch":
                   response={"text":`${received_message.text} : `+a.info.launch,}
+                  break;
+                  case "engineer":
+                  response={"text":`${received_message.text} : `+a.info.engineer,}
+                  break;
+                  case "encode":
+                  response={"text":`${received_message.text} : `+a.info.encode,}
+                  break;
+                  case "decode":
+                  response={"text":`${received_message.text} : `+a.info.decode,}
                   break;
                   case "liquid":
                   response={"text":`${received_message.text} : `+a.info.liquid,}
@@ -911,6 +967,9 @@ function handleMessage(sender_psid, received_message) {
                   case "view":
                   response={"text":`${received_message.text} : `+a.info.view,}
                   break;
+                  case "extension":
+                  response={"text":`${received_message.text} : `+a.info.extension,}
+                  break;
                   case "market":
                   response={"text":`${received_message.text} : `+a.info.market,}
                   break;
@@ -922,6 +981,18 @@ function handleMessage(sender_psid, received_message) {
                   break;
                   case "book":
                   response={"text":`${received_message.text} : `+a.info.book,}
+                  break;
+                  case "direct":
+                  response={"text":`${received_message.text} : `+a.info.direct,}
+                  break;
+                  case "dict":
+                  response={"text":`${received_message.text} : `+a.info.dict,}
+                  break;
+                  case "dictionary":
+                  response={"text":`${received_message.text} : `+a.info.dictionary,}
+                  break;
+                  case "directory":
+                  response={"text":`${received_message.text} : `+a.info.directory,}
                   break;
                   case "mess":
                   response={"text":`${received_message.text} : `+a.info.mess,}
@@ -946,6 +1017,13 @@ function handleMessage(sender_psid, received_message) {
           break;
       case "pass":
           response={"text":"đưa qua ,qua,cho qua",}
+      break;
+      case "web bot":
+      case "web bot":
+      case "#web bot":
+      case"#webbot":
+      response = {
+        "text": "this is web bot : https://demo-clearlove-dev.herokuapp.com/",}
       break;
       case "#getday":
           response={"text":`${received_message.text} : `+day+"/"+month+"/"+year,}

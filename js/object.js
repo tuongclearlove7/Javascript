@@ -42,8 +42,35 @@ delete myobject.age;
 delete myobject["nick name"]
 delete myobject["tuong"]
 
+/**
+object 
+- tham chiếu, kế thừa
+*/
+var courses = {
+    tuong:{
+    id:1,
+    name:"tuongclearlove7",
+    age: 20,
+    },
+    thao:{
+    id:2, 
+    name:"thaorose",
+    age:19,
+    },
+    mymom:{
+    id:3,
+    name:"Cuc nguyen",
+    age:50
+    }
+}
 
+console.log(courses.tuong);// lấy ra từng object
+console.log(courses.thao);
+console.log(courses.mymom)
 
+console.log(courses.tuong.id);// lấy ra từng phần tử trong object
+console.log(courses.thao.name);
+console.log(courses.mymom.age)
 
 
 
