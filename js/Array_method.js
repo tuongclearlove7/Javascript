@@ -21,9 +21,7 @@ let NewInfoFamily = Infofamily.map(Importanthandle);
 let joinObject = NewInfoFamily.join(" ");
 console.log(joinObject)
   
-  let myfunc = () =>{
-    
-  }
+ 
 
  var pass = prompt("nhap pass : ")
  /** 
@@ -84,9 +82,17 @@ var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ A
 ,' Mark Elliot Zuckerberg là một nhà lập trình máy tính người Mỹ kiêm doanh nhân mảng công nghệ Internet. Anh là nhà đồng sáng lập của Meta, và hiện đang điều hành công ty này với chức danh chủ tịch kiêm giám đốc điều hành. Tài sản của anh giảm 4,37 tỷ USD trong ngày 7/2, còn 85 tỷ USD.'
 ,'Tết Nguyên Đán là dịp lễ đầu năm mới theo âm lịch của các dân tộc thuộc Vùng văn hóa Đông Á, gồm có Trung Quốc, Nhật Bản, bán đảo Triều Tiên, Đài Loan và Việt Nam.'
 ,'Tỵ là một trong số 12 chi của Địa chi, thông thường được coi là địa chi thứ sáu. Đứng trước nó là Ngọ, đứng sau nó là Thìn. Tháng Tỵ trong nông lịch là tháng tư âm lịch. Về thời gian thì giờ Tỵ tương ứng với khoảng thời gian từ 09:00 tới 11:00 trong 24 giờ mỗi ngày. Về phương hướng thì Tỵ chỉ hướng nam đông nam.'
-]
+,'https://www.facebook.com/profile.php?id=100048916030141'
+,'Nga là một nhà nước cộng hòa liên bang với 85 thực thể liên bang. Nga có biên giới giáp với những quốc gia sau (từ tây bắc đến đông nam): Na Uy, Phần Lan, Estonia, Latvia, Litva và Ba Lan (cả hai đều qua tỉnh Kaliningrad), Belarus, Ukraina, Gruzia, Azerbaijan, Kazakhstan, Trung Quốc, Mông Cổ và Bắc Triều Tiên. Nước này cũng có biên giới trên biển với Nhật Bản (qua biển Okhotsk), Thổ Nhĩ Kỳ (qua biển Đen) và Hoa Kỳ (qua eo biển Bering), giáp với Canada qua Bắc Băng Dương. Với diện tích 17,098,246 km² (6,601,670 mi²), Nga là nước có diện tích lớn nhất thế giới, bao phủ gần {\displaystyle 1/9}{\displaystyle 1/9} diện tích lục địa Trái Đất. Nga cũng là nước đông dân thứ 9 thế giới với 145,8 triệu người (2020). Lãnh thổ Nga kéo dài toàn bộ phần phía bắc châu Á và 40% châu Âu, bao gồm 11 múi giờ và sở hữu nhiều loại môi trường, địa hình. Nga có trữ lượng khoáng sản và năng lượng lớn nhất trên thế giới - được coi là một trong những siêu cường năng lượng.[14][15][16][17] Nga cũng có diện tích rừng lớn nhất thế giới và các hồ của Nga chứa xấp xỉ 25% - tức {\displaystyle 1/4}1/4 lượng nước ngọt không đóng băng của thế giới.[18]'
+,'Albert Einstein là một nhà vật lý lý thuyết người Đức, được công nhận là một trong những nhà vật lý vĩ đại nhất mọi thời đại, người đã phát triển thuyết tương đối tổng quát, một trong hai trụ cột của vật lý hiện đại.'
+,'Sir Isaac Newton PRS là một nhà toán học, nhà vật lý, nhà thiên văn học, nhà thần học, và tác giả người Anh, người được công nhận rộng rãi là một trong những nhà toán học vĩ đại nhất và nhà khoa học ảnh hưởng nhất mọi thời đại và là một hình ảnh điển hình trong cách mạng khoa học.'
+,'Hacker là người hiểu rõ hoạt động của hệ thống máy tính, mạng máy tính, có thể viết hay chỉnh sửa phần mềm, phần cứng máy tính để làm thay đổi, chỉnh sửa nó với nhiều mục đích tốt xấu khác nhau. Công việc của hacker bao gồm lập trình, quản trị mạng và bảo mật.'
+,'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp. Theo Cương lĩnh và Điều lệ chính thức hiện nay, Đảng là đại diện của giai cấp công nhân, nhân dân lao động và của cả dân tộc, lấy Chủ nghĩa Marx-Lenin và Tư tưởng Hồ Chí Minh làm kim chỉ nam cho mọi hoạt động.[3] Trong ngữ cảnh không chính thức cũng dùng từ "Đảng" (hoặc "Đảng ta") để nói về Đảng Cộng sản Việt Nam. :)))'
+,' : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.'    
+,'https://www.facebook.com/Ytttuong1/'
+];
   console.log(SearchBot.length)
-  console.log(SearchBot[28])
+  console.log(SearchBot[36])
 
   switch(pass){
     case"hiện tại đơn":
@@ -95,7 +101,21 @@ var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ A
   }
 
 
-
-
+  var  myarray = [
+    ["tuong","clearlove"],
+    [7],
+    ["thao","roser"],
+    [9]  
+];
+let myfunc = () =>{
+  for(var i = 0; i < myarray.length; i++){
+    for (var j = 0; j< myarray[i].length; j++){
+        return myarray;
+        }
+    }
+}
+// lồng 2 vòng for vào nhau
+joinLanguages= myfunc().join(" ")
+console.log(joinLanguages)
 
 

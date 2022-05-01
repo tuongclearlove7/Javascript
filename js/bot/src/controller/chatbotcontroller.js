@@ -155,6 +155,10 @@ function handleMessage(sender_psid, received_message) {
 ,'Hacker là người hiểu rõ hoạt động của hệ thống máy tính, mạng máy tính, có thể viết hay chỉnh sửa phần mềm, phần cứng máy tính để làm thay đổi, chỉnh sửa nó với nhiều mục đích tốt xấu khác nhau. Công việc của hacker bao gồm lập trình, quản trị mạng và bảo mật.'
 ,'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp. Theo Cương lĩnh và Điều lệ chính thức hiện nay, Đảng là đại diện của giai cấp công nhân, nhân dân lao động và của cả dân tộc, lấy Chủ nghĩa Marx-Lenin và Tư tưởng Hồ Chí Minh làm kim chỉ nam cho mọi hoạt động.[3] Trong ngữ cảnh không chính thức cũng dùng từ "Đảng" (hoặc "Đảng ta") để nói về Đảng Cộng sản Việt Nam. :)))'
 ,' : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.'    
+,'https://www.facebook.com/Ytttuong1/',
+
+
+
 
 ];
 console.log("number languagefocus : ",SearchBot.length);
@@ -164,7 +168,10 @@ var toxic = ['oc','cc','sucsinh','súc sinh','sua cmm','fuck you',
             ,'mày bị ngu à','ngu nhu con chó','chet di',"Óc chó","lol",'cặc','ditmemay'
             ,"dien a`",'buoi','buồi','đầu buồi','shit','cứt','ngu','ocloz','oclol'
             ,'dmm','dcm','địt mẹ mày','óc chó','cdmm','bot điên','dcmm','đm','lồn','loz'
-            ,'vãi lồn','vailon','vaicac','vãi cặc','vai cac','vai lon','sủa','cút']; 
+            ,'vãi lồn','vailon','vaicac','vãi cặc','vai cac','vai lon','sủa','cút'
+            ,
+          
+          ]; 
 console.log("number toxic : ",toxic.length);
 let TOXIC = toxic;
 let Uppertoxic = TOXIC.map(element => {
@@ -338,7 +345,7 @@ let Uppertoxic = TOXIC.map(element => {
           stackoverflow:SearchBot[35],
         }
     }
-    var languages = ['các ngôn ngữ lập trình bao gồm :','ruby','javascript'
+    var languages = [[15],'ngôn ngữ lập trình bao gồm :','ruby','javascript'
                     ,'php','c','c#','c++','swift','golang',
                     'objective-c','python','css','c++','sql','java'];
     for (var i in languages){
@@ -352,13 +359,7 @@ let Uppertoxic = TOXIC.map(element => {
         "text": "CL7 is developer",
     }
 }
-    
-    if(received_message.text === "#profileCL7Dev"){
-       response = {
-        "text": "this is profile Dev bot : https://www.facebook.com/Ytttuong1/",
-    }
-}
-    if(received_message.text === "#Profilemycrush"){
+    if(received_message.text === "#"){
        response = {
         "text": "this is profile my crush : "+SearchBot[29],
     }
@@ -512,9 +513,9 @@ let Uppertoxic = TOXIC.map(element => {
           case"thaorose":
           case"mycrush":
           case"crush":
-          case"crush":
+          case"crush"://
           case"#mycrush":
-          response={"text": SearchBot[1]+"\nImage My crush : "+SearchBot[23],}
+          response={"text": SearchBot[1]+"\nImage My crush : "+SearchBot[23]+"\nprofile crush : "+SearchBot[29],}
           break;  
           case"ma kết":
           case"#ma ket":
@@ -537,6 +538,9 @@ let Uppertoxic = TOXIC.map(element => {
           response={"text": SearchBot[6],}
           break;
           case"việt nam":
+          case'viet nam':
+          case'vietnam':
+          case'Việt nam':
           case"#vietnam":
           case"Việt Nam":
           response={"text": SearchBot[7],}
@@ -549,6 +553,7 @@ let Uppertoxic = TOXIC.map(element => {
           break;
           case"dak lak":
           case"đăk lăk":
+          case'Đăk lăk':
           case"#dak lak":
           case"#đăk lăk":
           case"Đak Lak":
@@ -640,104 +645,29 @@ let Uppertoxic = TOXIC.map(element => {
           case"duy tân":
           case"#Duy tân":
           response={"text": SearchBot[22],}
-          break;
-          case Uppertoxic[0]:
-          case Uppertoxic[1]:
-          case Uppertoxic[2]:
-          case Uppertoxic[3]:
-          case Uppertoxic[4]:
-          case Uppertoxic[5]:
-          case Uppertoxic[6]:
-          case Uppertoxic[7]:
-          case Uppertoxic[8]:
-          case Uppertoxic[9]:
-          case Uppertoxic[10]:
-          case Uppertoxic[11]:
-          case Uppertoxic[12]:
-          case Uppertoxic[13]:
-          case Uppertoxic[14]:
-          case Uppertoxic[15]:
-          case Uppertoxic[16]:
-          case Uppertoxic[17]:
-          case Uppertoxic[18]:
-          case Uppertoxic[19]:
-          case Uppertoxic[20]:
-          case Uppertoxic[21]:
-          case Uppertoxic[22]:
-          case Uppertoxic[23]:
-          case Uppertoxic[24]:
-          case Uppertoxic[25]:
-          case Uppertoxic[26]:
-          case Uppertoxic[27]:
-          case Uppertoxic[28]:
-          case Uppertoxic[29]:
-          case Uppertoxic[30]:
-          case Uppertoxic[31]:
-          case Uppertoxic[32]:
-          case Uppertoxic[33]:
-          case Uppertoxic[34]:
-          case Uppertoxic[35]:
-          case Uppertoxic[36]:
-          case Uppertoxic[37]:
-          case Uppertoxic[38]:
-          case Uppertoxic[39]:
-          case Uppertoxic[40]:
-          case Uppertoxic[41]:
-          case Uppertoxic[42]:
-          case Uppertoxic[43]:
-          case Uppertoxic[44]:
-          case Uppertoxic[45]:
-          case Uppertoxic[46]:
-          case Uppertoxic[47]:
-          case toxic[0]:
-          case toxic[1]:
-          case toxic[2]:
-          case toxic[3]:
-          case toxic[4]:
-          case toxic[5]:
-          case toxic[6]:
-          case toxic[7]:
-          case toxic[8]:
-          case toxic[9]:
-          case toxic[10]:
-          case toxic[11]:
-          case toxic[12]:
-          case toxic[13]:
-          case toxic[14]:
-          case toxic[15]:
-          case toxic[16]:
-          case toxic[17]:
-          case toxic[18]:
-          case toxic[19]:
-          case toxic[20]:                  
-          case toxic[21]:
-          case toxic[22]:
-          case toxic[23]:
-          case toxic[24]:
-          case toxic[25]:
-          case toxic[26]:
-          case toxic[27]:
-          case toxic[28]:
-          case toxic[29]:
-          case toxic[30]:
-          case toxic[31]:
-          case toxic[32]:
-          case toxic[33]:
-          case toxic[34]:
-          case toxic[35]:
-          case toxic[36]:
-          case toxic[37]:
-          case toxic[38]:
-          case toxic[39]:
-          case toxic[40]:
-          case toxic[41]:
-          case toxic[42]:
-          case toxic[43]:
-          case toxic[44]:
-          case toxic[45]:
-          case toxic[46]:
-          case toxic[47]:
-          response={"text": a.info.war,}
+          break;          
+          case toxic[0]:case toxic[1]:case toxic[2]:case toxic[3]:case toxic[4]:case toxic[5]:
+          case toxic[6]:case toxic[7]:case toxic[8]:case toxic[9]:case toxic[10]:case toxic[11]:
+          case toxic[12]:case toxic[13]:case toxic[14]:case toxic[15]:case toxic[16]:case toxic[17]:
+          case toxic[18]:case toxic[19]:case toxic[20]:case toxic[21]:case toxic[22]:case toxic[23]:
+          case toxic[24]:case toxic[25]:case toxic[26]:case toxic[27]:case toxic[28]:case toxic[29]:
+          case toxic[30]:case toxic[31]:case toxic[32]:case toxic[33]:case toxic[34]:case toxic[35]:
+          case toxic[36]:case toxic[37]:case toxic[38]:case toxic[39]:case toxic[40]:case toxic[41]:
+          case toxic[42]:case toxic[43]:case toxic[44]:case toxic[45]:case toxic[46]:case toxic[47]:
+          
+              case Uppertoxic[0]:case Uppertoxic[1]:case Uppertoxic[2]:case Uppertoxic[3]:
+              case Uppertoxic[4]:case Uppertoxic[5]:case Uppertoxic[6]:case Uppertoxic[7]:
+              case Uppertoxic[8]:case Uppertoxic[9]:case Uppertoxic[10]:case Uppertoxic[11]:
+              case Uppertoxic[12]:case Uppertoxic[13]:case Uppertoxic[14]:case Uppertoxic[15]:
+              case Uppertoxic[16]:case Uppertoxic[17]:case Uppertoxic[18]:case Uppertoxic[19]:
+              case Uppertoxic[20]:case Uppertoxic[21]:case Uppertoxic[22]:case Uppertoxic[23]:
+              case Uppertoxic[24]:case Uppertoxic[25]:case Uppertoxic[26]:case Uppertoxic[27]:
+              case Uppertoxic[28]:case Uppertoxic[29]:case Uppertoxic[30]:case Uppertoxic[31]:
+              case Uppertoxic[32]:case Uppertoxic[33]:case Uppertoxic[34]:case Uppertoxic[35]:
+              case Uppertoxic[36]:case Uppertoxic[37]:case Uppertoxic[38]:case Uppertoxic[39]:
+              case Uppertoxic[40]:case Uppertoxic[41]:case Uppertoxic[42]:case Uppertoxic[43]:
+              case Uppertoxic[44]:case Uppertoxic[45]:case Uppertoxic[46]:case Uppertoxic[47]:
+              response={"text": a.info.war,}
           break;
       case"#newton":
       case"Newton":
@@ -762,6 +692,7 @@ let Uppertoxic = TOXIC.map(element => {
       case "Bạn là nhất":
       case "bịp":
       case "Bịp rồi":
+      case "bịp rồi":
       case "bip roi":
       case "bip":
       case "mày là nhất":
@@ -1288,7 +1219,7 @@ let Uppertoxic = TOXIC.map(element => {
       case "bạn tên là gì?":
       case"bạn tên gì?":
         response={"text": "My name is BotChatCLearLove7 🤖",}
-        break;
+        break;  
       case "Boss":
       case "boss":
         response={"text": "My Boss https://www.facebook.com/Ytttuong1/ 😎 ",}
@@ -1327,10 +1258,10 @@ let Uppertoxic = TOXIC.map(element => {
           break;
 }
 
-    if(received_message.text==="#Tường"){
-      response = {"text": `${received_message.text} : Tường nick name Clearlove7`,
-      }
-  }
+  if(received_message.text==="#Tường"){
+    response = {"text": `${received_message.text} : Tường nick name Clearlove7 Profile : `+SearchBot[36],
+    }
+}
 
    else if (received_message.attachments) {
     let attachment_url = received_message.attachments[0].payload.url;
