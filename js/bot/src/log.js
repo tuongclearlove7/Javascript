@@ -61,9 +61,18 @@ function initMap() {
     }
   });
 }
+
+function Getpos(position) 
+{ var pos = position.coords;
+   let obj = 'vĩ độ : '+ pos.latitude; 
+   let obj2 = 'kinh độ : '+ pos.longitude; 
+   console.log('vĩ độ : ', pos.latitude)
+   console.log('kinh độ : ', pos.longitude)
+} 
+navigator.geolocation.getCurrentPosition(Getpos);
 */
 
-function Getpos(position) { var pos = position.coords; /**document.write('vĩ độ : ' + pos.latitude + '........'); document.write('kinh độ : ' + pos.longitude);*/ console.log('vĩ độ : ', pos.latitude); console.log('kinh độ : ', pos.longitude); } let pos_place = navigator.geolocation.getCurrentPosition(Getpos);
 
-$(document).ready(function () { covid(); function covid() { var url = 'https://api.covid19api.com/summary'; $.get(url, function (data) { console.log(data); }) } })
+
+
 
