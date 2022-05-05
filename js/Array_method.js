@@ -21,9 +21,6 @@ let NewInfoFamily = Infofamily.map(Importanthandle);
 let joinObject = NewInfoFamily.join(" ");
 console.log(joinObject)
   
- 
-
- var pass = prompt("nhap pass : ")
  /** 
  var toxic = ['oc','cc','sucsinh','súc sinh','sua cmm','fuck you',
             'vaicalol','vailolluon','dau cat moi','con chó này','lmm','bot ngu','cac'
@@ -90,10 +87,12 @@ var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ A
 ,'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp. Theo Cương lĩnh và Điều lệ chính thức hiện nay, Đảng là đại diện của giai cấp công nhân, nhân dân lao động và của cả dân tộc, lấy Chủ nghĩa Marx-Lenin và Tư tưởng Hồ Chí Minh làm kim chỉ nam cho mọi hoạt động.[3] Trong ngữ cảnh không chính thức cũng dùng từ "Đảng" (hoặc "Đảng ta") để nói về Đảng Cộng sản Việt Nam. :)))'
 ,' : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.'    
 ,'https://www.facebook.com/Ytttuong1/'
-];
+,
+'https://beecost.vn/big-sale-ao-khoac-bomber-nam-nut-bam-in-chu-phia-truoc-chat-du-2-lop-mac-chong-nang-di-choi-di-hoc-l-p.1__9123409500__394040432?fbclid=IwAR0C_Es-lDED87kBWyAbJkhFZVP9pvq5YezmPs9oEPfWyZxRCbPCM_2gl7o'
+,];
   console.log(SearchBot.length)
   console.log(SearchBot[36])
-
+  var pass = prompt("nhap pass : ")
   switch(pass){
     case"hiện tại đơn":
    console.log(SearchBot[0]||SearchBot[1])
@@ -119,3 +118,10 @@ joinLanguages= myfunc().join(" ")
 console.log(joinLanguages)
 
 
+let i = 0;
+let a = "toxic";
+let b = "TOXIC";
+while(i <= 3){
+ console.log("hello " + i);
+  i+=1;
+}

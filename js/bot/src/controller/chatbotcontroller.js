@@ -155,11 +155,10 @@ function handleMessage(sender_psid, received_message) {
 ,'Hacker là người hiểu rõ hoạt động của hệ thống máy tính, mạng máy tính, có thể viết hay chỉnh sửa phần mềm, phần cứng máy tính để làm thay đổi, chỉnh sửa nó với nhiều mục đích tốt xấu khác nhau. Công việc của hacker bao gồm lập trình, quản trị mạng và bảo mật.'
 ,'Đảng Cộng sản Việt Nam là đảng cầm quyền và là chính đảng duy nhất được phép hoạt động tại Việt Nam theo Hiến pháp. Theo Cương lĩnh và Điều lệ chính thức hiện nay, Đảng là đại diện của giai cấp công nhân, nhân dân lao động và của cả dân tộc, lấy Chủ nghĩa Marx-Lenin và Tư tưởng Hồ Chí Minh làm kim chỉ nam cho mọi hoạt động.[3] Trong ngữ cảnh không chính thức cũng dùng từ "Đảng" (hoặc "Đảng ta") để nói về Đảng Cộng sản Việt Nam. :)))'
 ,' : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.'    
-,'https://www.facebook.com/Ytttuong1/',
-
-
-
-
+,'https://www.facebook.com/Ytttuong1/'
+,'My shirt : https://shopee.vn/big-sale-ao-khoac-bomber-nam-nut-bam-in-chu-phia-truoc-chat-du-2-lop-mac-chong-nang-di-choi-di-hoc-len-form-nhu-i.394040432.9123409500?af_click_lookback=7d&af_reengagement_window=7d&af_siteid=an_17104620000&af_sub_siteid=119271&af_viewthrough_lookback=1d&atnct1=5737c6ec2e0716f3d8a7a5c4e0de0d9a&atnct2=SIBVa35GASlKD51LxOc9p74hInxlMs0VGUr8MFJDwPYUGu51&atnct3=eWNpx00063d002k13&c=322&is_retargeting=true&pid=affiliates&utm_campaign=&utm_content=SIBVa35GASlKD51LxOc9p74hInxlMs0VGUr8MFJDwPYUGu51-119271-322--&utm_medium=affiliates&utm_source=an_17104620000'
+,'Thất bại tôi đã k no fap được 15 ngày thật kém cỏi, nhưng tôi sẽ k bỏ cuộc đâu vấp thì đứng dậy tiếp tục 15 ngày nofap và bỏ luôn cố lên tôi sẽ làm được dù có khó khăn đến đâu'
+,'Chúc mừng bạn đã no fap 1 ngày thành công hãy chiến thắng chính bản thân mình !'
 ];
 console.log("number languagefocus : ",SearchBot.length);
 
@@ -168,8 +167,8 @@ var toxic = ['oc','cc','sucsinh','súc sinh','sua cmm','fuck you',
             ,'mày bị ngu à','ngu nhu con chó','chet di',"Óc chó","lol",'cặc','ditmemay'
             ,"dien a`",'buoi','buồi','đầu buồi','shit','cứt','ngu','ocloz','oclol'
             ,'dmm','dcm','địt mẹ mày','óc chó','cdmm','bot điên','dcmm','đm','lồn','loz'
-            ,'vãi lồn','vailon','vaicac','vãi cặc','vai cac','vai lon','sủa','cút'
-            ,
+            ,'vãi lồn','vailon','vaicac','vãi cặc','vai cac','vai lon','sủa','cút','dm'
+            ,'vcl'
           
           ]; 
 console.log("number toxic : ",toxic.length);
@@ -180,171 +179,47 @@ let Uppertoxic = TOXIC.map(element => {
 //[29][30]
   var a = { 
       info: {
-          success: "thành công",
-          age: "tuổi",
-          successfully:"thành công",
-          deploy:"triển khai",
-          install : "tải về",
-          download:"tải xuống",
-          fuck : "chết tiệt",
-          page : "trang",
-          mark : "dấu",
-          snake : SearchBot[28],
-          forever : "mãi mãi",
-          socket : "ổ cắm",
-          pass : "qua , đưa qua, cho qua",
-          local : "cục bộ, địa phương",
-          password : "mật khẩu",
-          archive : "lưu trữ",
-          tets : SearchBot[27],
-          standalone : "Độc lập",
-          infomation : "thông tin",
-          system : "hệ thống",
-          job : "công việc",
-          technical : "kỹ thuật",
-          technology : "công nghệ",
-          invironment : "môi trường",
-          scene : "bối cảnh",
-          screen : "màn hình",
-          component : "thành phần",
-          comment : "bình luận",
-          code : "mã",
-          source : "nguồn",
-          commit:"cam kết",
-          book : "sách",
-          place : "vị trí",
-          marketplace : "thường trường",
-          market : "thị trường , chợ",
-          supermarket:"siêu thị",
-          exchange : "giao lưu",
-          chat : "trò chuyện",
-          trash : "rác rưởi",
-          garbage : "rác",
-          know : "biết",
-          get : "mắc phải",
-          request : "yêu cầu",
-          quick : "nhanh chóng",
-          test : "thử",
-          use : "sử dụng",
-          user:"người dùng",
-          graphic : "đồ họa",
-          config:"cấu hình",
-          inter : "chôn cất",
-          face : "mặt, đối mặt",
-          pointer : "con trỏ",
-          falcon : "chim ưng",
-          heave : "phập phồng",
-          hear : "nghe",
-          match : "trận đấu",
-          math : "toán",
-          twist : "vặn",
-          change : "thay đổi",
-          none : "không ai",
-          null : "vô giá trị",
-          view : "lượt xem",
-          see : "trông thấy , xem",
-          active:"tích cực",
-          negative : "từ chối",
-          service : "dịch vụ",
-          engine : "động cơ",
-          game : "trò chơi",
-          play : "chơi",
-          player : "người chơi",
-          work : "công việc , làm việc",
-          convert : "chuyển đổi",
-          for : "vì",
-          because:"bởi vì",
-          beautiful:"đẹp , xinh đẹp",
-          bad : "tệ",
-          so : "rất",
-          sad : "buồn bã",
-          disappointed : "thất vọng ",
-          native : "tự nhiên",
-          control : "điều khiển",
-          express : "bày tỏ",
-          expression : "biểu hiện",
-          ruler : "cây thước",
-          rule : "luật lệ",
-          water : "nước",
-          football : "bóng đá",
-          soccer : "đá bóng",
-          liquid : "chất lỏng",
-          clear : "thông thoáng , xóa, quét",
-          clean :"dọn dẹp",
-          love : "yêu",
-          nice : "đẹp",
-          good : "tốt",
-          an :"một",
-          A : "1",
-          find : "tìm , tìm thấy",
-          more: "hơn",
-          most :"hầu hết",
-          stop : "dừng lại",
-          next : "tiếp tục, kế tiếp",
-          mess :"sự lộn xộn",
-          message : "tin nhắn",
-          massage : "mát xa",
-          comfortable:"thoải mái",
-          very : "rất",
-          done :"xong",
-          mountain:"núi",
-          tree:"cây ",
-          rush:"cây bấc",
-          launch:"phóng",
-          package:"bưu kiện",
-          pack:"đóng gói",
-          contruct : "xây dựng",
-          submation:"sự phụ thuộc",
-          subtraction : "phép trừ",
-          any : "không có gì",
-          do:"làm",
-          while:"trong khi",
-          loop:"lặp, lặp lại",
-          perform:"thực hiện",
-          flatform : "hình phẳng",
-          flat:"bằng phẳng",
-          form : "biểu mẫu",
-          template:"bản mẫu",
-          temp:"nhân viên bán thời gian",
-          tamed:"thuần hóa",
-          Notification:"thông báo",
-          server:"máy chủ",
-          remote:"xa xôi",
-          verify:"xác minh",
-          token:"mã thông báo",
-          application:"ứng dụng",
-          software:"phần mềm",
-          tool:"dụng cụ",
-          login:"đăng nhập",
-          signin:"đăng nhập",
-          console:"bàn điều khiển",
-          extension:"sự mở rộng",
-          explore:"khám phá",
-          export:"xuất khẩu",
-          Attachment:"tập tin đính kèm",
-          signup:"đăng ký",
-          element : "các yếu tố",
-          encode:"mã hóa",
-          decode:"giải mã",
-          boot:"khởi động",
-          root:"nguồn gốc",
-          document:"tài liệu",
-          directory:"danh mục",
-          dictionary:"từ điển",
-          dict :"mệnh lệnh",
-          direct:"trực tiếp",
-          engineer : "kỹ sư",
-          spam:"❌ stop! không được spam ❌",
-          VN: "Việt nam vô địch, Việt Nam number one1 😂",
-          war : "❌ stop! không được phép nói tục ❌",
-          russia: SearchBot[30],
-          Einstein:SearchBot[31],
-          newton:SearchBot[32],
-          hacker:SearchBot[33],
-          communism:`${received_message.text} : `+SearchBot[34],
+          success: "thành công",age: "tuổi",successfully:"thành công",deploy:"triển khai",
+          install : "tải về",download:"tải xuống",fuck : "chết tiệt",page : "trang",
+          mark : "dấu",snake : SearchBot[28],forever : "mãi mãi",socket : "ổ cắm",
+          pass : "qua , đưa qua, cho qua",local : "cục bộ, địa phương",password : "mật khẩu",
+          archive : "lưu trữ",tets : SearchBot[27],standalone : "Độc lập",infomation : "thông tin",
+          system : "hệ thống",job : "công việc",mountain:"núi",tree:"cây ",rush:"cây bấc",
+          technical : "kỹ thuật",technology : "công nghệ", invironment : "môi trường",scene : "bối cảnh",
+          screen : "màn hình",component : "thành phần", comment : "bình luận",code : "mã", launch:"phóng",
+          source : "nguồn",commit:"cam kết",book : "sách",place : "vị trí",marketplace : "thường trường",
+          market : "thị trường , chợ",supermarket:"siêu thị",exchange : "giao lưu", chat : "trò chuyện",
+          trash : "rác rưởi", garbage : "rác",know : "biết",get : "mắc phải",request : "yêu cầu",
+          quick : "nhanh chóng", test : "thử",use : "sử dụng", user:"người dùng",graphic : "đồ họa",
+          config:"cấu hình",inter : "chôn cất",face : "mặt, đối mặt", pointer : "con trỏ",
+          falcon : "chim ưng", heave : "phập phồng",hear : "nghe",match : "trận đấu",math : "toán",
+          twist : "vặn",change : "thay đổi",none : "không ai",null : "vô giá trị",view : "lượt xem",
+          see : "trông thấy , xem",active:"tích cực",negative : "từ chối",service : "dịch vụ",
+          engine : "động cơ",game : "trò chơi",play : "chơi",player : "người chơi",work : "công việc , làm việc",
+          convert : "chuyển đổi",for : "vì",because:"bởi vì",beautiful:"đẹp , xinh đẹp",bad : "tệ",
+          so : "rất",sad : "buồn bã",disappointed : "thất vọng ",native : "tự nhiên",control :"điều khiển",
+          express : "bày tỏ",expression : "biểu hiện",ruler : "cây thước",rule : "luật lệ",water : "nước",
+          football : "bóng đá",soccer : "đá bóng",liquid : "chất lỏng",clear : "thông thoáng , xóa, quét",
+          clean :"dọn dẹp",love : "yêu",nice : "đẹp",good : "tốt",an :"một",A : "1",find : "tìm , tìm thấy",
+          more: "hơn",most :"hầu hết",stop : "dừng lại",next : "tiếp tục, kế tiếp",mess :"sự lộn xộn",
+          message : "tin nhắn",massage : "mát xa",comfortable:"thoải mái",very : "rất",done :"xong",
+          package:"bưu kiện",pack:"đóng gói",contruct : "xây dựng",submation:"sự phụ thuộc",
+          subtraction : "phép trừ",any : "không có gì",do:"làm",while:"trong khi",loop:"lặp, lặp lại",
+          perform:"thực hiện",flatform : "hình phẳng",flat:"bằng phẳng",form : "biểu mẫu",
+          template:"bản mẫu",temp:"nhân viên bán thời gian",tamed:"thuần hóa",Notification:"thông báo",
+          server:"máy chủ",remote:"xa xôi",verify:"xác minh",token:"mã thông báo",application:"ứng dụng",
+          software:"phần mềm",tool:"dụng cụ",login:"đăng nhập",signin:"đăng nhập",
+          console:"bàn điều khiển",extension:"sự mở rộng",explore:"khám phá",export:"xuất khẩu",
+          Attachment:"tập tin đính kèm",signup:"đăng ký",element : "các yếu tố",encode:"mã hóa",
+          decode:"giải mã",boot:"khởi động",root:"nguồn gốc",document:"tài liệu",directory:"danh mục",
+          dictionary:"từ điển",dict :"mệnh lệnh",direct:"trực tiếp",engineer : "kỹ sư",
+          spam:"❌ stop! không được spam ❌",VN: "Việt nam vô địch, Việt Nam number one1 😂",
+          war : "❌ stop! không được phép nói tục ❌",russia: SearchBot[30],Einstein:SearchBot[31],
+          newton:SearchBot[32],hacker:SearchBot[33],communism:`${received_message.text} : `+SearchBot[34],
           stackoverflow:SearchBot[35],
         }
     }
+
     var languages = [[15],'ngôn ngữ lập trình bao gồm :','ruby','javascript'
                     ,'php','c','c#','c++','swift','golang',
                     'objective-c','python','css','c++','sql','java'];
@@ -353,6 +228,7 @@ let Uppertoxic = TOXIC.map(element => {
         response={"text":languages.join(" "),}
         }
     }
+    
 
     if(received_message.text === "CL7"){
        response = {
@@ -456,7 +332,7 @@ let Uppertoxic = TOXIC.map(element => {
     }
     if(received_message.text==="ethical"){
       response = {"text": 'ethical : có đạo đức',}
-    }//successfully web bot
+    } 
     
     if(received_message.text==="analyst"){
       response = {"text": 'analyst : nhà phân tích',}
@@ -503,7 +379,16 @@ let Uppertoxic = TOXIC.map(element => {
     }
 
       switch(received_message.text){
-        case"hiện tại đơn":
+        case"áo tôi sắp mua":
+        case"Áo tôi sắp mua":
+        case"áo tôi sắp mua":
+        case"Áo":
+        case"áo":
+        case"shirt":
+        case"Shirt":
+          response={"text": SearchBot[37],}
+          break;
+          case"hiện tại đơn":
           response={"text": SearchBot[0],}
           break;
           case"thao":
@@ -654,10 +539,11 @@ let Uppertoxic = TOXIC.map(element => {
           case toxic[30]:case toxic[31]:case toxic[32]:case toxic[33]:case toxic[34]:case toxic[35]:
           case toxic[36]:case toxic[37]:case toxic[38]:case toxic[39]:case toxic[40]:case toxic[41]:
           case toxic[42]:case toxic[43]:case toxic[44]:case toxic[45]:case toxic[46]:case toxic[47]:
-          
-              case Uppertoxic[0]:case Uppertoxic[1]:case Uppertoxic[2]:case Uppertoxic[3]:
-              case Uppertoxic[4]:case Uppertoxic[5]:case Uppertoxic[6]:case Uppertoxic[7]:
-              case Uppertoxic[8]:case Uppertoxic[9]:case Uppertoxic[10]:case Uppertoxic[11]:
+          case toxic[48]:case toxic[49]:
+
+               case Uppertoxic[0]:case Uppertoxic[1]:case Uppertoxic[2]:case Uppertoxic[3]:
+               case Uppertoxic[4]:case Uppertoxic[5]:case Uppertoxic[6]:case Uppertoxic[7]:
+               case Uppertoxic[8]:case Uppertoxic[9]:case Uppertoxic[10]:case Uppertoxic[11]:
               case Uppertoxic[12]:case Uppertoxic[13]:case Uppertoxic[14]:case Uppertoxic[15]:
               case Uppertoxic[16]:case Uppertoxic[17]:case Uppertoxic[18]:case Uppertoxic[19]:
               case Uppertoxic[20]:case Uppertoxic[21]:case Uppertoxic[22]:case Uppertoxic[23]:
@@ -667,6 +553,7 @@ let Uppertoxic = TOXIC.map(element => {
               case Uppertoxic[36]:case Uppertoxic[37]:case Uppertoxic[38]:case Uppertoxic[39]:
               case Uppertoxic[40]:case Uppertoxic[41]:case Uppertoxic[42]:case Uppertoxic[43]:
               case Uppertoxic[44]:case Uppertoxic[45]:case Uppertoxic[46]:case Uppertoxic[47]:
+              case Uppertoxic[48]:case Uppertoxic[49]:
               response={"text": a.info.war,}
           break;
       case"#newton":
@@ -1182,6 +1069,15 @@ let Uppertoxic = TOXIC.map(element => {
       case "pass":
           response={"text":"đưa qua ,qua,cho qua",}
       break;
+      case "No fap":
+      case "no fap":
+          response={"text":SearchBot[38],}
+      break;
+      case "1 day no fap thành công":
+      case "no fap thành công":
+      case "No fap thành công":
+            response={"text":SearchBot[39],}
+        break;
       case "web bot":
       case "web bot":
       case "#web bot":
@@ -1227,7 +1123,7 @@ let Uppertoxic = TOXIC.map(element => {
       case "help":
       case "cứu":
       case"cíu":
-        response={"text": SearchBot[25],}//[28]snake
+        response={"text": SearchBot[25],}
       break;
       case"page bot":
         response={"text": "https://www.facebook.com/Bot-117828560890633/",}
@@ -1257,7 +1153,9 @@ let Uppertoxic = TOXIC.map(element => {
           response={"text": "Hi!",}
           break;
 }
-
+if(received_message.text===toxic[0] >3||received_message.text===toxic[49]>3){
+  response = { "text": "Nếu bạn tiếp tục spam tôi sẽ block bạn !",}
+}
   if(received_message.text==="#Tường"){
     response = {"text": `${received_message.text} : Tường nick name Clearlove7 Profile : `+SearchBot[36],
     }
