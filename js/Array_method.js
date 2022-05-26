@@ -21,7 +21,7 @@ let NewInfoFamily = Infofamily.map(Importanthandle);
 let joinObject = NewInfoFamily.join(" ");
 console.log(joinObject)
   
- /** 
+ 
  var toxic = ['oc','cc','sucsinh','súc sinh','sua cmm','fuck you',
             'vaicalol','vailolluon','dau cat moi','con chó này','lmm','bot ngu','cac'
             ,'mày bị ngu à','ngu nhu con chó','chet di',"Óc chó","lol",'cặc','ditmemay'
@@ -49,7 +49,7 @@ let TOXIC = toxic;
       console.log("không đc nói tục !");
     }
 
-*/
+
 var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ Adj Trong đó: S (subject): Chủ ngữ N/ Adj (Noun/ Adjective): Danh từ/ tính từ Lưu ý: S = I + am S = He/ She/ It + is S = You/ We/ They + are Ví dụ : My father is a teacher. (Bố tôi là một giáo viên.) They are from Japan. (Họ đến từ Nhật Bản.) I am handsome. (Tôi đẹp trai.)'
 ,'Thảo sinh ngày 9/9/2003 cô ấy rất đẹp và dịu dàng cô ấy là người tôi thích, thật tuyệt nếu cô ấy làm người yêu tôi, tôi không thể quên cô ấy cô ấy đã mang đến cho tôi những kỷ niệm không thể nào quên.'
 ,'Những người thuộc cung Ma Kết sống theo nguyên tắc, cẩn thận, quy củ, coi trọng các luật lệ và đề phòng trong các mối quan hệ. Bởi vậy trong mắt mọi người, Ma Kết lúc nào cũng nghiêm túc, không hài hước, vui vẻ. Tính cách cung Ma Kết hướng nội. Ban đầu khi giao tiếp, họ sẽ rụt rè, lúng túng và thiếu tự tin. Nếu có ai đó pha vỡ tấm lá chắn ngại ngùng của Ma Kết, họ mới có thể trở nên nhiệt tình hơn. Ma Kết là người tuyệt đối giữ bí mật và kín đáo, họ biết điều gì nên nói và không nên nói. Nếu ai đó nhờ giữ bí mật, Ma Kết sẽ đồng ý và không mấp máy nửa lời. Họ cũng thường giữ kín những mục tiêu và kế hoạch của mình, dù ai có cố gắng nhòm ngó cũng không thể khai thác được thông tin gì.'
@@ -119,9 +119,24 @@ console.log(joinLanguages)
 
 
 let i = 0;
-let a = "toxic";
-let b = "TOXIC";
-while(i <= 3){
- console.log("hello " + i);
-  i+=1;
+
+/**
+if(pass){
+  var toxic_Messenger = pass > 3 ? "nếu bạn tiếp tục nói tục tôi sẽ block bạn" : 500
+  console.log(toxic_Messenger);
 }
+
+ */
+
+
+
+let toxic_messenger = 2;
+let va = toxic_messenger < 1 ? 1000 :
+         toxic_messenger < 2 ? 1500 :
+         toxic_messenger < 3 ? 2000 : 3000
+
+console.log(va);
+
+
+
+

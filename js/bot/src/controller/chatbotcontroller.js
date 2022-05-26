@@ -159,6 +159,7 @@ function handleMessage(sender_psid, received_message) {
 ,'My shirt : https://shopee.vn/big-sale-ao-khoac-bomber-nam-nut-bam-in-chu-phia-truoc-chat-du-2-lop-mac-chong-nang-di-choi-di-hoc-len-form-nhu-i.394040432.9123409500?af_click_lookback=7d&af_reengagement_window=7d&af_siteid=an_17104620000&af_sub_siteid=119271&af_viewthrough_lookback=1d&atnct1=5737c6ec2e0716f3d8a7a5c4e0de0d9a&atnct2=SIBVa35GASlKD51LxOc9p74hInxlMs0VGUr8MFJDwPYUGu51&atnct3=eWNpx00063d002k13&c=322&is_retargeting=true&pid=affiliates&utm_campaign=&utm_content=SIBVa35GASlKD51LxOc9p74hInxlMs0VGUr8MFJDwPYUGu51-119271-322--&utm_medium=affiliates&utm_source=an_17104620000'
 ,'Thất bại tôi đã k no fap được 15 ngày thật kém cỏi, nhưng tôi sẽ k bỏ cuộc đâu vấp thì đứng dậy tiếp tục 15 ngày nofap và bỏ luôn cố lên tôi sẽ làm được dù có khó khăn đến đâu'
 ,'Chúc mừng bạn đã no fap 1 ngày thành công hãy chiến thắng chính bản thân mình !'
+,'https://sinhvientot.net/struct-phan-so/',
 ];
 console.log("number languagefocus : ",SearchBot.length);
 
@@ -177,13 +178,14 @@ let Uppertoxic = TOXIC.map(element => {
     return element.toUpperCase();
 });
 //[29][30]
+
   var a = { 
       info: {
           success: "thành công",age: "tuổi",successfully:"thành công",deploy:"triển khai",
           install : "tải về",download:"tải xuống",fuck : "chết tiệt",page : "trang",
           mark : "dấu",snake : SearchBot[28],forever : "mãi mãi",socket : "ổ cắm",
           pass : "qua , đưa qua, cho qua",local : "cục bộ, địa phương",password : "mật khẩu",
-          archive : "lưu trữ",tets : SearchBot[27],standalone : "Độc lập",infomation : "thông tin",
+          archive : "lưu trữ",tets : SearchBot[27],standalone : "Độc lập",information : "thông tin",
           system : "hệ thống",job : "công việc",mountain:"núi",tree:"cây ",rush:"cây bấc",
           technical : "kỹ thuật",technology : "công nghệ", invironment : "môi trường",scene : "bối cảnh",
           screen : "màn hình",component : "thành phần", comment : "bình luận",code : "mã", launch:"phóng",
@@ -370,7 +372,7 @@ let Uppertoxic = TOXIC.map(element => {
       }
     }
     if(received_message.text==="received"){
-      response = {"text": `${received_message.text}  : nhận `,
+      response = {"text": `${received_message.text}  : nhận `,  
       }
     }
     if(received_message.text==="language"){
@@ -378,15 +380,50 @@ let Uppertoxic = TOXIC.map(element => {
       }
     }
 
+
+    switch(received_message.text){
+      case toxic[0]:case toxic[1]:case toxic[2]:case toxic[3]:case toxic[4]:case toxic[5]:
+      case toxic[6]:case toxic[7]:case toxic[8]:case toxic[9]:case toxic[10]:case toxic[11]:
+      case toxic[12]:case toxic[13]:case toxic[14]:case toxic[15]:case toxic[16]:case toxic[17]:
+      case toxic[18]:case toxic[19]:case toxic[20]:case toxic[21]:case toxic[22]:case toxic[23]:
+      case toxic[24]:case toxic[25]:case toxic[26]:case toxic[27]:case toxic[28]:case toxic[29]:
+      case toxic[30]:case toxic[31]:case toxic[32]:case toxic[33]:case toxic[34]:case toxic[35]:
+      case toxic[36]:case toxic[37]:case toxic[38]:case toxic[39]:case toxic[40]:case toxic[41]:
+      case toxic[42]:case toxic[43]:case toxic[44]:case toxic[45]:case toxic[46]:case toxic[47]:
+      case toxic[48]:case toxic[49]:
+  
+           case Uppertoxic[0]:case Uppertoxic[1]:case Uppertoxic[2]:case Uppertoxic[3]:
+           case Uppertoxic[4]:case Uppertoxic[5]:case Uppertoxic[6]:case Uppertoxic[7]:
+           case Uppertoxic[8]:case Uppertoxic[9]:case Uppertoxic[10]:case Uppertoxic[11]:
+          case Uppertoxic[12]:case Uppertoxic[13]:case Uppertoxic[14]:case Uppertoxic[15]:
+          case Uppertoxic[16]:case Uppertoxic[17]:case Uppertoxic[18]:case Uppertoxic[19]:
+          case Uppertoxic[20]:case Uppertoxic[21]:case Uppertoxic[22]:case Uppertoxic[23]:
+          case Uppertoxic[24]:case Uppertoxic[25]:case Uppertoxic[26]:case Uppertoxic[27]:
+          case Uppertoxic[28]:case Uppertoxic[29]:case Uppertoxic[30]:case Uppertoxic[31]:
+          case Uppertoxic[32]:case Uppertoxic[33]:case Uppertoxic[34]:case Uppertoxic[35]:
+          case Uppertoxic[36]:case Uppertoxic[37]:case Uppertoxic[38]:case Uppertoxic[39]:
+          case Uppertoxic[40]:case Uppertoxic[41]:case Uppertoxic[42]:case Uppertoxic[43]:
+          case Uppertoxic[44]:case Uppertoxic[45]:case Uppertoxic[46]:case Uppertoxic[47]:
+          case Uppertoxic[48]:case Uppertoxic[49]:
+          response={"text": a.info.war,}
+      break;
+  }
+
       switch(received_message.text){
         case"áo tôi sắp mua":
         case"Áo tôi sắp mua":
         case"áo tôi sắp mua":
         case"Áo":
-        case"áo":
+        case"áo": 
         case"shirt":
         case"Shirt":
           response={"text": SearchBot[37],}
+          break;
+          case"Struct":
+          case"kiểu dữ liệu cấu trúc":
+          case"Kiểu dữ liệu cấu trúc":
+          case"struct":
+          response={"text": SearchBot[40],}
           break;
           case"hiện tại đơn":
           response={"text": SearchBot[0],}
@@ -398,7 +435,7 @@ let Uppertoxic = TOXIC.map(element => {
           case"thaorose":
           case"mycrush":
           case"crush":
-          case"crush"://
+          case"crush"://information
           case"#mycrush":
           response={"text": SearchBot[1]+"\nImage My crush : "+SearchBot[23]+"\nprofile crush : "+SearchBot[29],}
           break;  
@@ -530,32 +567,7 @@ let Uppertoxic = TOXIC.map(element => {
           case"duy tân":
           case"#Duy tân":
           response={"text": SearchBot[22],}
-          break;          
-          case toxic[0]:case toxic[1]:case toxic[2]:case toxic[3]:case toxic[4]:case toxic[5]:
-          case toxic[6]:case toxic[7]:case toxic[8]:case toxic[9]:case toxic[10]:case toxic[11]:
-          case toxic[12]:case toxic[13]:case toxic[14]:case toxic[15]:case toxic[16]:case toxic[17]:
-          case toxic[18]:case toxic[19]:case toxic[20]:case toxic[21]:case toxic[22]:case toxic[23]:
-          case toxic[24]:case toxic[25]:case toxic[26]:case toxic[27]:case toxic[28]:case toxic[29]:
-          case toxic[30]:case toxic[31]:case toxic[32]:case toxic[33]:case toxic[34]:case toxic[35]:
-          case toxic[36]:case toxic[37]:case toxic[38]:case toxic[39]:case toxic[40]:case toxic[41]:
-          case toxic[42]:case toxic[43]:case toxic[44]:case toxic[45]:case toxic[46]:case toxic[47]:
-          case toxic[48]:case toxic[49]:
-
-               case Uppertoxic[0]:case Uppertoxic[1]:case Uppertoxic[2]:case Uppertoxic[3]:
-               case Uppertoxic[4]:case Uppertoxic[5]:case Uppertoxic[6]:case Uppertoxic[7]:
-               case Uppertoxic[8]:case Uppertoxic[9]:case Uppertoxic[10]:case Uppertoxic[11]:
-              case Uppertoxic[12]:case Uppertoxic[13]:case Uppertoxic[14]:case Uppertoxic[15]:
-              case Uppertoxic[16]:case Uppertoxic[17]:case Uppertoxic[18]:case Uppertoxic[19]:
-              case Uppertoxic[20]:case Uppertoxic[21]:case Uppertoxic[22]:case Uppertoxic[23]:
-              case Uppertoxic[24]:case Uppertoxic[25]:case Uppertoxic[26]:case Uppertoxic[27]:
-              case Uppertoxic[28]:case Uppertoxic[29]:case Uppertoxic[30]:case Uppertoxic[31]:
-              case Uppertoxic[32]:case Uppertoxic[33]:case Uppertoxic[34]:case Uppertoxic[35]:
-              case Uppertoxic[36]:case Uppertoxic[37]:case Uppertoxic[38]:case Uppertoxic[39]:
-              case Uppertoxic[40]:case Uppertoxic[41]:case Uppertoxic[42]:case Uppertoxic[43]:
-              case Uppertoxic[44]:case Uppertoxic[45]:case Uppertoxic[46]:case Uppertoxic[47]:
-              case Uppertoxic[48]:case Uppertoxic[49]:
-              response={"text": a.info.war,}
-          break;
+          break;       
       case"#newton":
       case"Newton":
       case"newton":
@@ -654,8 +666,8 @@ let Uppertoxic = TOXIC.map(element => {
       case "standalone":
           response={"text":`${received_message.text} : `+a.info.standalone,}
           break;
-      case "infomation":
-          response={"text":`${received_message.text} : `+a.info.infomation,}
+      case "information":
+          response={"text":`${received_message.text} : `+a.info.information,}
           break;
       case "job":
           response={"text":`${received_message.text} : `+a.info.job,}
@@ -1071,7 +1083,7 @@ let Uppertoxic = TOXIC.map(element => {
       break;
       case "No fap":
       case "no fap":
-          response={"text":SearchBot[38],}
+          response={"text":9,}
       break;
       case "1 day no fap thành công":
       case "no fap thành công":
@@ -1153,9 +1165,7 @@ let Uppertoxic = TOXIC.map(element => {
           response={"text": "Hi!",}
           break;
 }
-if(received_message.text===toxic[0] >3||received_message.text===toxic[49]>3){
-  response = { "text": "Nếu bạn tiếp tục spam tôi sẽ block bạn !",}
-}
+
   if(received_message.text==="#Tường"){
     response = {"text": `${received_message.text} : Tường nick name Clearlove7 Profile : `+SearchBot[36],
     }
