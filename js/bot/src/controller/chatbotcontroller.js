@@ -249,26 +249,33 @@ let Uppertoxic = TOXIC.map(element => {
     }
 }
     if (received_message.text==="#Hi"){
-      response = {"text": 'Hi : chào',}
+      response = {"text": 'Hi : chào',
     }
+}
     if (received_message.text==="produce"){
-    response = {"text": 'produce : sản xuất',}
+    response = {"text": 'produce : sản xuất',
     }
+}
     if (received_message.text==="flag"){
-    response = {"text": 'flag : lá cờ',}
+    response = {"text": 'flag : lá cờ',
     }
+}
     if (received_message.text==="switch"){
-    response = {"text": 'switch : công tắc điện',}
+    response = {"text": 'switch : công tắc điện',
     }
+}
     if (received_message.text==="case"){
-    response = {"text": 'case : trường hợp',}
+    response = {"text": 'case : trường hợp',
     }
+}
     if (received_message.text==="messenge"){
-    response = {"text": 'messenge : tin nhắn',}
+    response = {"text": 'messenge : tin nhắn',
     }
+}
     if (received_message.text==="process"){
-    response = {"text": 'process : tiến trình',}
+    response = {"text": 'process : tiến trình',
     }
+}
     if (received_message.text==="product"){
     response = {"text": 'product : sản phẩm',}
     }
