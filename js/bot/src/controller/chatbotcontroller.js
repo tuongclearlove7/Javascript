@@ -1,4 +1,5 @@
 require("dotenv").config();
+import { table } from "console";
 import { text } from "express";
 import { get } from "express/lib/response";
 import request from "request";
@@ -101,9 +102,9 @@ var Infofamily = [
 function Importanthandle(Family){
   return "\nID : "+Family.id+"\nName : "+Family.name+"\nAge : "+Family.age+'\n'+Family.nickname;
 }
+
 let NewInfoFamily = Infofamily.map(Importanthandle);
 let joinObject = NewInfoFamily.join(" ");
-
 
 function handleMessage(sender_psid, received_message) {
     let response;        
@@ -574,7 +575,7 @@ let Uppertoxic = TOXIC.map(element => {
           response={"text": a.info.newton,}
           break;
       case"my important":
-      response={"text": joinObject,}
+      response={"text":joinObject,}
       break;
       case"#nga":
       case"russia":

@@ -80,7 +80,21 @@ var my_filter_list = my_list.filter(function(my_lists, index){
 });
 console.log(my_filter_list);
 
+function handlecour(list,index,originArray){
+    //console.log(list);
+    return `<h2>${list.name}<h2>`;
+   /* return{ id : list.id, 
+            name : `ngôn ngữ : ${list.name}`, 
+            coin : list.coin,
+            coinText : `giá : ${list.coin}`,
+            index : index,
+            originArray : my_list,
+    };*/
+}
+var newcour = my_list.map(handlecour);
 
+
+console.log(newcour.join(''));
 
 
 

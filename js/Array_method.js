@@ -135,7 +135,9 @@ let va = toxic_messenger < 1 ? 1000 :
          toxic_messenger < 2 ? 1500 :
          toxic_messenger < 3 ? 2000 : 3000
 
-console.log(va);
+console.table({
+  'lượt chạy : ': va,
+});
 
 
 
