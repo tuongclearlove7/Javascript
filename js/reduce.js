@@ -67,58 +67,84 @@ var totalcoin = my_list.reduce(coinHandle, 0);
 // return về 200 thì 200 sẽ gán vào biến tích trữ +200
 console.log(totalcoin);
 
+var j=0;
+totalcoin = my_list.reduce(function(count,course){
+    j++;
+    console.log(i,count,course);
+    return count+course.coin;
+},0);
+console.log(totalcoin);
 
 
-var Infofamily = [
+var num = [100,200,300,400,500];
+var cointotal = num.reduce(function(total, num){
+    return total+num;
+}); 
+console.log(cointotal);
+
+
+var depthArray = [1,2,[3,4],5,6,[7,8,9]];
+
+var flatArray = depthArray.reduce(function(flatoutput, depthitem){
+    return flatoutput.concat(depthitem);
+},[]);
+console.log(flatArray);
+
+
+var  topics=[
     {
-      id: 1,
-      name: "Trần Vinh Quang",
-      age: 50,
-      nickname:''//null
+        topic:"front-end",
+        cour:[
+            {
+                ID:1,
+                title:"html ,css",
+            },
+            {
+                ID:2,
+                title:"javascripts"
+            }
+        ]
     },
-    {
-      id:2, 
-      name:"Nguyễn Thị Cúc ",
-      age:50,
-      nickname:''//null
-    },
-    {
-      id:3,
-      name:"Trần Thị Mai ",
-      age:23,
-      nickname:"Nickname : Mimi\n"
-    },
-    {
-      id:3, 
-      name:"Trần Thế Tường ",
-      age:20,
-      nickname:"Nickname : Clearlove7\n"
-    },
-    {
-      id:4,
-      name:"Hồ Thị Phương Thảo ",
-      age:19,
-      nickname:"Nickname : Rose"
+        {
+            topic:"back-end",
+            cour:[{
+                ID : 1,
+                title:"php"
+            },
+            {
+                ID: 2,
+                title:"nodejs"
+            }
+        ]
     },
 ];
 
+var  newcour = topics.reduce(function(cour, topic){
+    return cour.concat(topic.cour)
+},[]);
+console.log(newcour);   
 
+var html = newcour.map(function(cour){
+    return`<div>
+    <h2>${cour.title}<h2>
+    <h2>${cour.ID}<h2>
+    </div>`;
+});
+console.log(html.join(""));
 
-var count = 0;
-function coinHandle(accumulator,current_Value,current_index,originArray){
-    count++;
-    var total = accumulator+current_Value.name;
-    console.table({
-        'lượt chạy : ': count,
-        'biến tích trữ':accumulator,
-        'tích trữ được ': total,
-    });
-   return total;
+function ob(){
+    function Getpos(position) {
+        var pos = position.coords;
+        let  pos1 = 'vĩ độ : '+pos.latitude;
+        let pos2 = 'kinh độ : '+pos.longitude;
+        console.log(pos1);
+        console.log(pos2);
+        return pos1+pos2;
 }
-var totalcoin = Infofamily.reduce(coinHandle, 0);
-
-
-
+let pos_place = navigator.geolocation.getCurrentPosition(Getpos);
+    return pos_place;
+}
+ob();
 
 
 

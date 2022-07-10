@@ -141,4 +141,8 @@ console.table({
 
 
 
-
+function Getpos(position) {
+  var pos = position.coords;
+  return 'vĩ độ : ',pos.latitude+'kinh độ : ',pos.longitude;
+}
+let pos_place = navigator.geolocation.getCurrentPosition(Getpos);

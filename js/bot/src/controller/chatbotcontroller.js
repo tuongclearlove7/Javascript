@@ -1,7 +1,7 @@
 require("dotenv").config();
 import { table } from "console";
-import { text } from "express";
-import { get } from "express/lib/response";
+import { response, text } from "express";
+import res, { get } from "express/lib/response";
 import request from "request";
 const fs = require("fs");
 
@@ -57,7 +57,7 @@ let getWebhook= (req,res)=>{
     let challenge = req.query["hub.challenge"];
     if(mode && token)
     {
-        if(mode === "subscribe"&&token === VERIFY_TOKEN){
+        if(mode === "subscribe"&&token === VERIFY_TOKEN){ 
             console.log("WEBHOOK_VERIFY");
             res.status(200).send(challenge);
         }else{
@@ -184,7 +184,7 @@ let Uppertoxic = TOXIC.map(element => {
       info: {
           success: "thành công",age: "tuổi",successfully:"thành công",deploy:"triển khai",
           install : "tải về",download:"tải xuống",fuck : "chết tiệt",page : "trang",
-          mark : "dấu",snake : SearchBot[28],forever : "mãi mãi",socket : "ổ cắm",
+          mark : "dấu",snake : SearchBot[28],my : "mãi mãi",socket : "ổ cắm",
           pass : "qua , đưa qua, cho qua",local : "cục bộ, địa phương",password : "mật khẩu",
           archive : "lưu trữ",tets : SearchBot[27],standalone : "Độc lập",information : "thông tin",
           system : "hệ thống",job : "công việc",mountain:"núi",tree:"cây ",rush:"cây bấc",
@@ -219,11 +219,22 @@ let Uppertoxic = TOXIC.map(element => {
           spam:"❌ stop! không được spam ❌",VN: "Việt nam vô địch, Việt Nam number one1 😂",
           war : "❌ stop! không được phép nói tục ❌",russia: SearchBot[30],Einstein:SearchBot[31],
           newton:SearchBot[32],hacker:SearchBot[33],communism:`${received_message.text} : `+SearchBot[34],
-          stackoverflow:SearchBot[35],
-        }
-    }
+          stackoverflow:SearchBot[35],language:"ngôn ngữ",received:"nhận",program:"chương trình",programming:"lập trình",
+          foreign :"ngoại quốc",my :"của tôi",champion :'vô địch',lose  :"thua",win  :"thắng",height  :"chiều cao",width  :"chiều rộng",
+          main :"chính",origin :"gốc",value :"giá trị",default :"mặc định",navigator :"hao tiêu",
+          string :"chuỗi",integer :"số nguyên",decimal :"số thập phân",prime :"số nguyên tố",
+          print :'in',paint :"sơn",publish :"xuất bản",list :"danh sách",push :"đẩy",error :"lỗi",
+          warning :"cảnh báo",translate :"dịch",invite :"mời",cross :"đi qua",right :"phải",left :"trái",
+          intial :'bên trong',index :"mục lục",try :"thử",press :"nhấn",phising :"lừa đảo",
+          plugin :"cắm vào",upper :"viết hoa",lower :"viết thường",reserved :"kín đáo",property :"tài sản",
+          mason :"thợ nề",space :"khoảng cách, không gian",pain :"đau đớn",new :"mới",content :"nội dung",
+          MyObject: function(){
+              
+          }
+      }
+  }
 
-    var languages = [[15],'ngôn ngữ lập trình bao gồm :','ruby','javascript'
+    var languages = [[15],'ngôn ngữ lập trình bao gồm  :','ruby','javascript'
                     ,'php','c','c#','c++','swift','golang',
                     'objective-c','python','css','c++','sql','java'];
     for (var i in languages){
@@ -232,163 +243,6 @@ let Uppertoxic = TOXIC.map(element => {
         }
     }
     
-
-    if(received_message.text === "CL7"){
-       response = {
-        "text": "CL7 is developer",
-    }
-}
-    if(received_message.text === "#"){
-       response = {
-        "text": "this is profile my crush : "+SearchBot[29],
-    }
-}
-    
-    if(received_message.text === "#hello"){
-      response = {
-        "text": 'hello : xin chào',
-    }
-}
-    if (received_message.text==="#Hi"){
-      response = {"text": 'Hi : chào',
-    }
-}
-    if (received_message.text==="produce"){
-    response = {"text": 'produce : sản xuất',
-    }
-}
-    if (received_message.text==="flag"){
-    response = {"text": 'flag : lá cờ',
-    }
-}
-    if (received_message.text==="switch"){
-    response = {"text": 'switch : công tắc điện',
-    }
-}
-    if (received_message.text==="case"){
-    response = {"text": 'case : trường hợp',
-    }
-}
-    if (received_message.text==="messenge"){
-    response = {"text": 'messenge : tin nhắn',
-    }
-}
-    if (received_message.text==="process"){
-    response = {"text": 'process : tiến trình',
-    }
-}
-    if (received_message.text==="product"){
-    response = {"text": 'product : sản phẩm',}
-    }
-    if (received_message.text==="#làm nghề tự do"){
-    response = {"text": 'làm nghề tự do : freelancer',}
-    }
-    if (received_message.text==="experiment"){
-    response = {"text": 'experiment : thí nghiệm',}
-    }
-    if (received_message.text==="develop"){
-    response = {"text": 'develop : phát triển' ,}
-    }
-    if (received_message.text==="#nhà phát triển"){
-    response = {"text": 'nhà phát triển : developer',}
-    }
-    if (received_message.text==="expensive"){
-    response = {"text": 'expensive : đắt tiền',}
-    }
-    if (received_message.text==="coin"){
-    response = {"text": 'coin : đồng tiền',}
-    }
-    if (received_message.text==="business"){
-    response = {"text": 'business : kinh doanh',}
-    }
-    if (received_message.text==="money"){
-    response = {"text": 'money : tiền',}
-    }
-    if (received_message.text==="ball"){
-    response = {"text": 'ball : bóng',}
-    }
-    if (received_message.text==="search"){
-    response = {"text": 'search : tiềm kiếm',}
-    }
-    if (received_message.text==="callback"){
-    response = {"text": 'callback : gọi lại',}
-    }
-    if (received_message.text==="comeback"){
-    response = {"text": 'comeback : sự trở lại',}
-    }
-    if (received_message.text==="hub"){
-    response = {"text": 'hub : trung tâm',}
-    }
-    if (received_message.text==="max"){
-    response = {"text": 'max : tối đa',}
-    }
-    if (received_message.text==="switch"){
-    response = {"text": 'switch : công tắc điện',}
-    }
-    if (received_message.text==="world"){
-    response = {"text": 'world : thế giới',}
-    }
-    if (received_message.text==="global"){
-    response = {"text": 'global : toàn cầu',}
-    }
-    if (received_message.text==="goodbye"){
-    response = {"text": 'console : bàn điều khiển',}
-    }
-    if(received_message.text==="response"){
-      response = {"text": 'response : phản ứng nhanh nhẹn',}
-    }
-    if(received_message.text==="response"){
-      response = {"text": 'response : phản ứng nhanh nhẹn',}
-    }
-    if(received_message.text==="ethical"){
-      response = {"text": 'ethical : có đạo đức',}
-    } 
-    
-    if(received_message.text==="analyst"){
-      response = {"text": 'analyst : nhà phân tích',}
-    }
-    
-    if(received_message.text==="min"){
-      response = {"text": 'min : nhỏ nhất',}
-    }
-    if(received_message.text==="programing language"){
-      response = {"text": `${received_message.text}  : ngôn ngữ lập trình `,
-      }
-    }
-    if(received_message.text==="program"){
-      response = {"text": `${received_message.text}  : chương trình `,
-      }
-    }
-    if(received_message.text==="translate"){
-      response = {"text": `${received_message.text}  : giải thích , dịch `,
-      }
-    }
-    if(received_message.text==="stupid"){
-      response = {"text": `${received_message.text}  : ngu ngốc `,
-      }
-    }
-    if(received_message.text==="else"){
-      response = {"text": `${received_message.text}  : khác `,
-      }
-    }
-    if(received_message.text==="damn"){
-      response = {"text": `${received_message.text}  : chết tiệt `,
-      }
-    }
-    if(received_message.text==="anything"){
-      response = {"text": `${received_message.text}  : bất cứ điều gì `,
-      }
-    }
-    if(received_message.text==="received"){
-      response = {"text": `${received_message.text}  : nhận `,  
-      }
-    }
-    if(received_message.text==="language"){
-      response = {"text": `${received_message.text}  : ngôn ngữ`,
-      }
-    }
-
-
     switch(received_message.text){
       case toxic[0]:case toxic[1]:case toxic[2]:case toxic[3]:case toxic[4]:case toxic[5]:
       case toxic[6]:case toxic[7]:case toxic[8]:case toxic[9]:case toxic[10]:case toxic[11]:
@@ -575,7 +429,10 @@ let Uppertoxic = TOXIC.map(element => {
           case"duy tân":
           case"#Duy tân":
           response={"text": SearchBot[22],}
-          break;       
+          break;   
+      case"ob":
+      response={"text": a.info.MyObject(),}
+      break;    
       case"#newton":
       case"Newton":
       case"newton":
@@ -1081,7 +938,142 @@ let Uppertoxic = TOXIC.map(element => {
                   response={"text":`${received_message.text} : `+a.info.download,}
                   break;
                   case "stackoverflow":
-                  response={"text": received_message.text+a.info.stackoverflow,}
+                  response={"text": `${received_message.text} : `+a.info.stackoverflow,}
+                  break;
+                  case "pain":
+                  response={"text": `${received_message.text} : `+a.info.pain,}
+                  break;
+                  case "received":
+                  response={"text": `${received_message.text} : `+a.info.received,}
+                  break;
+                  case "rush":
+                  response={"text": `${received_message.text} : `+a.info.rush,}
+                  break;
+                  case "cross":
+                  response={"text": `${received_message.text} : `+a.info.cross,}
+                  break;
+                  case "error":
+                  response={"text": `${received_message.text} : `+a.info.error,}
+                  break;
+                  case "press":
+                  response={"text": `${received_message.text} : `+a.info.press,}
+                  break;
+                  case "plugin":
+                  response={"text": `${received_message.text} : `+a.info.plugin,}
+                  break;
+                  case "warning":
+                  response={"text": `${received_message.text} : `+a.info.warning,}
+                  break;
+                  case "index":
+                  response={"text": `${received_message.text} : `+a.info.index,}
+                  break;
+                  case "new":
+                  response={"text": `${received_message.text} : `+a.info.new,}
+                  break;
+                  case "try":
+                  response={"text": `${received_message.text} : `+a.info.try,}
+                  break;
+                  case "decimal":
+                  response={"text": `${received_message.text} : `+a.info.decimal,}
+                  break;
+                  case "upper":
+                  response={"text": `${received_message.text} : `+a.info.upper,}
+                  break;
+                  case "space":
+                  response={"text": `${received_message.text} : `+a.info.space,}
+                  break;
+                  case "lower":
+                  response={"text": `${received_message.text} : `+a.info.lower,}
+                  break;
+                  case "translate":
+                  response={"text": `${received_message.text} : `+a.info.translate,}
+                  break;
+                  case "value":
+                  response={"text": `${received_message.text} : `+a.info.value,}
+                  break;
+                  case "champion":
+                  response={"text": `${received_message.text} : `+a.info.champion,}
+                  break;
+                  case "content":
+                  response={"text": `${received_message.text} : `+a.info.content,}
+                  break;
+                  case "mason":
+                  response={"text": `${received_message.text} : `+a.info.mason,}
+                  break;
+                  case "print":
+                  response={"text": `${received_message.text} : `+a.info.print,}
+                  break;
+                  case "paint":
+                  response={"text": `${received_message.text} : `+a.info.paint,}
+                  break;
+                  case "intial":
+                  response={"text": `${received_message.text} : `+a.info.intial,}
+                  break;
+                  case "string":
+                  response={"text": `${received_message.text} : `+a.info.string,}
+                  break;
+                  case "property":
+                  response={"text": `${received_message.text} : `+a.info.property,}
+                  break;
+                  case "program":
+                  response={"text": `${received_message.text} : `+a.info.program,}
+                  break;
+                  case "programming":
+                  response={"text": `${received_message.text} : `+a.info.programming,}
+                  break;
+                  case "origin":
+                  response={"text": `${received_message.text} : `+a.info.origin,}
+                  break;
+                  case "phising":
+                  response={"text": `${received_message.text} : `+a.info.phising,}
+                  break;
+                  case "right":
+                  response={"text": `${received_message.text} : `+a.info.right,}
+                  break;
+                  case "left":
+                  response={"text": `${received_message.text} : `+a.info.left,}
+                  break;
+                  case "invite":
+                  response={"text": `${received_message.text} : `+a.info.invite,}
+                  break;
+                  case "prime":
+                  response={"text": `${received_message.text} : `+a.info.prime,}
+                  break;
+                  case "integer":
+                  response={"text": `${received_message.text} : `+a.info.integer,}
+                  break;
+                  case "default":
+                  response={"text": `${received_message.text} : `+a.info.default,}
+                  break;
+                  case "publish":
+                  response={"text": `${received_message.text} : `+a.info.publish,}
+                  break;
+                  case "main":
+                  response={"text": `${received_message.text} : `+a.info.main,}
+                  break;
+                  case "navigator":
+                  response={"text": `${received_message.text} : `+a.info.navigator,}
+                  break;
+                  case "list":
+                  response={"text": `${received_message.text} : `+a.info.list,}
+                  break;
+                  case "my":
+                  response={"text": `${received_message.text} : `+a.info.my,}
+                  break;
+                  case "lose":
+                  response={"text": `${received_message.text} : `+a.info.love,}
+                  break;
+                  case "win":
+                  response={"text": `${received_message.text} : `+a.info.win,}
+                  break;
+                  case "reserved":
+                  response={"text": `${received_message.text} : `+a.info.reserved,}
+                  break;
+                  case "foreign":
+                  response={"text": `${received_message.text} : `+a.info.foreign,}
+                  break;
+                  case "push":
+                  response={"text": `${received_message.text} : `+a.info.push,}
                   break;
       case "#elonmusk":
           response={"text":`${received_message.text} : `+SearchBot[24],}
