@@ -13,8 +13,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
 
 
-initWrbrouter(app)
+initWrbrouter(app);
+
 let port = process.env.PORT || 8080;
+
+//configViewEngine(app);
 
 app.listen(port, () => {
     console.log("Bot is running on port : ", port);

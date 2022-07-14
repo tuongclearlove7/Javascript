@@ -10,8 +10,8 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 let VERIFY_TOKEN = process.env.VERIFY_TOKEN;
 
 let getHomePage = (req,res)=>{
-   return res.send("<html style='background-image:url(https://scr.vn/wp-content/uploads/2020/08/Hacker-hut-thuoc-chat-nhat.jpg?fbclid=IwAR0iMaJRi_BaNf1F0l2YDbM0lupWF4NbzazZOIHHLXBmUj8HLFw7TYi_6Q4);text-align:center;'><h1 style='color:#8ae7e7;text-align:center;font-family:time new roman;'>Chatbot Messenger Fanpage Facebook </h1><div style='margin:auto;'><img style='position:absolute;left:2rem;top:6.7rem;margin:auto;box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);width:150px;height:130px;', src='https://i.pinimg.com/originals/7d/9b/1d/7d9b1d662b28cd365b33a01a3d0288e1.gif'></div><script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script><script>function Getpos(position) {var pos = position.coords;console.log('vĩ độ : ',pos.latitude);console.log('kinh độ : ',pos.longitude);}let pos_place = navigator.geolocation.getCurrentPosition(Getpos);$(document).ready(function(){covid();function covid(){var url = 'https://api.covid19api.com/summary';$.get(url,function(data){console.log(data);})}})</script></br></br> <iframe style='box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.5);' src='https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F117828560890633%2Fphotos%2Fa.117828614223961%2F117828830890606%2F&show_text=true&width=500' width='500px' height='530px' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowfullscreen='true' allow='autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share'></iframe>")
-};
+   return res.render('demoapp.ejs');
+}
 
 let postWebhook= (req,res)=>{
 
@@ -66,45 +66,22 @@ let getWebhook= (req,res)=>{
         }
 };
 
-var Infofamily = [
-    {
-      id: 1,
-      name: "Trần Vinh Quang",
-      age: 50,
-      nickname:''//null
-    },
-    {
-      id:2, 
-      name:"Nguyễn Thị Cúc ",
-      age:50,
-      nickname:''//null
-    },
-    {
-      id:3,
-      name:"Trần Thị Mai ",
-      age:23,
-      nickname:"Nickname : Mimi\n"
-    },
-    {
-      id:3, 
-      name:"Trần Thế Tường ",
-      age:20,
-      nickname:"Nickname : Clearlove7\n"
-    },
-    {
-      id:4,
-      name:"Hồ Thị Phương Thảo ",
-      age:19,
-      nickname:"Nickname : Rose"
-    },
-];
-
-function Importanthandle(Family){
-  return "\nID : "+Family.id+"\nName : "+Family.name+"\nAge : "+Family.age+'\n'+Family.nickname;
-}
-
-let NewInfoFamily = Infofamily.map(Importanthandle);
-let joinObject = NewInfoFamily.join(" ");
+var _0x923e=["\x54\x72\u1EA7\x6E\x20\x56\x69\x6E\x68\x20\x51\x75\x61\x6E\x67",
+"","\x4E\x67\x75\x79\u1EC5\x6E\x20\x54\x68\u1ECB\x20\x43\xFA\x63\x20",
+"\x54\x72\u1EA7\x6E\x20\x54\x68\u1ECB\x20\x4D\x61\x69\x20",
+"\x4E\x69\x63\x6B\x6E\x61\x6D\x65\x20\x3A\x20\x4D\x69\x6D\x69\x0A",
+"\x54\x72\u1EA7\x6E\x20\x54\x68\u1EBF\x20\x54\u01B0\u1EDD\x6E\x67\x20",
+"\x4E\x69\x63\x6B\x6E\x61\x6D\x65\x20\x3A\x20\x43\x6C\x65\x61\x72\x6C\x6F\x76\x65\x37\x0A",
+"\x48\u1ED3\x20\x54\x68\u1ECB\x20\x50\x68\u01B0\u01A1\x6E\x67\x20\x54\x68\u1EA3\x6F\x20",
+"\x4E\x69\x63\x6B\x6E\x61\x6D\x65\x20\x3A\x20\x52\x6F\x73\x65","\x0A\x49\x44\x20\x3A\x20","\x69\x64",
+"\x0A\x4E\x61\x6D\x65\x20\x3A\x20","\x6E\x61\x6D\x65","\x0A\x41\x67\x65\x20\x3A\x20","\x61\x67\x65","\x0A",
+"\x6E\x69\x63\x6B\x6E\x61\x6D\x65","\x6D\x61\x70","\x20","\x6A\x6F\x69\x6E"];
+var Infofamily=[{id:1,name:_0x923e[0],age:50,nickname:_0x923e[1]},{id:2,name:_0x923e[2],age:50,nickname:_0x923e[1]},
+{id:3,name:_0x923e[3],age:23,nickname:_0x923e[4]},{id:3,name:_0x923e[5],age:20,nickname:_0x923e[6]},
+{id:4,name:_0x923e[7],age:19,nickname:_0x923e[8]}];function Importanthandle(_0x8d96x3){
+    return _0x923e[9]+ _0x8d96x3[_0x923e[10]]+ _0x923e[11]+ _0x8d96x3[_0x923e[12]]+ _0x923e[13]+ 
+    _0x8d96x3[_0x923e[14]]+ _0x923e[15]+ _0x8d96x3[_0x923e[16]]}let NewInfoFamily=Infofamily[_0x923e[17]](Importanthandle);
+let joinObject=NewInfoFamily[_0x923e[19]](_0x923e[18])
 
 function handleMessage(sender_psid, received_message) {
     let response;        
@@ -120,8 +97,12 @@ function handleMessage(sender_psid, received_message) {
   var year = date.getFullYear();
   var month = date.getMonth()+1;
   var day =  date.getDay();
-  var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ Adj Trong đó: S (subject): Chủ ngữ N/ Adj (Noun/ Adjective): Danh từ/ tính từ Lưu ý: S = I + am S = He/ She/ It + is S = You/ We/ They + are Ví dụ : My father is a teacher. (Bố tôi là một giáo viên.) They are from Japan. (Họ đến từ Nhật Bản.) I am handsome. (Tôi đẹp trai.)'
-,'Thảo sinh ngày 9/9/2003 cô ấy rất đẹp và dịu dàng cô ấy là người tôi thích, thật tuyệt nếu cô ấy làm người yêu tôi, tôi không thể quên cô ấy cô ấy đã mang đến cho tôi những kỷ niệm không thể nào quên.'
+  var _0x9124=["\x54\x68\u1EA3\x6F\x20\x73\x69\x6E\x68\x20\x6E\x67\xE0\x79\x20\x39\x2F\x39\x2F\x32\x30\x30\x33\x20\x63\xF4\x20\u1EA5\x79\x20\x72\u1EA5\x74\x20\u0111\u1EB9\x70\x20\x76\xE0\x20\x64\u1ECB\x75\x20\x64\xE0\x6E\x67\x20\x63\xF4\x20\u1EA5\x79\x20\x6C\xE0\x20\x6E\x67\u01B0\u1EDD\x69\x20\x74\xF4\x69\x20\x74\x68\xED\x63\x68\x2C\x20\x74\x68\u1EAD\x74\x20\x74\x75\x79\u1EC7\x74\x20\x6E\u1EBF\x75\x20\x63\xF4\x20\u1EA5\x79\x20\x6C\xE0\x6D\x20\x6E\x67\u01B0\u1EDD\x69\x20\x79\xEA\x75\x20\x74\xF4\x69\x2C\x20\x74\xF4\x69\x20\x6B\x68\xF4\x6E\x67\x20\x74\x68\u1EC3\x20\x71\x75\xEA\x6E\x20\x63\xF4\x20\u1EA5\x79\x20\x63\xF4\x20\u1EA5\x79\x20\u0111\xE3\x20\x6D\x61\x6E\x67\x20\u0111\u1EBF\x6E\x20\x63\x68\x6F\x20\x74\xF4\x69\x20\x6E\x68\u1EEF\x6E\x67\x20\x6B\u1EF7\x20\x6E\x69\u1EC7\x6D\x20\x6B\x68\xF4\x6E\x67\x20\x74\x68\u1EC3\x20\x6E\xE0\x6F\x20\x71\x75\xEA\x6E\x2E",
+  "\x43\x68\xFA\x63\x20\x6D\u1EEB\x6E\x67\x20\x62\u1EA1\x6E\x20\u0111\xE3\x20\x6E\x6F\x20\x66\x61\x70\x20\x31\x20\x6E\x67\xE0\x79\x20\x74\x68\xE0\x6E\x68\x20\x63\xF4\x6E\x67\x20\x68\xE3\x79\x20\x63\x68\x69\u1EBF\x6E\x20\x74\x68\u1EAF\x6E\x67\x20\x63\x68\xED\x6E\x68\x20\x62\u1EA3\x6E\x20\x74\x68\xE2\x6E\x20\x6D\xEC\x6E\x68\x20\x21",
+  "\x54\x68\u1EA5\x74\x20\x62\u1EA1\x69\x20\x74\xF4\x69\x20\u0111\xE3\x20\x6B\x20\x6E\x6F\x20\x66\x61\x70\x20\u0111\u01B0\u1EE3\x63\x20\x31\x35\x20\x6E\x67\xE0\x79\x20\x74\x68\u1EAD\x74\x20\x6B\xE9\x6D\x20\x63\u1ECF\x69\x2C\x20\x6E\x68\u01B0\x6E\x67\x20\x74\xF4\x69\x20\x73\u1EBD\x20\x6B\x20\x62\u1ECF\x20\x63\x75\u1ED9\x63\x20\u0111\xE2\x75\x20\x76\u1EA5\x70\x20\x74\x68\xEC\x20\u0111\u1EE9\x6E\x67\x20\x64\u1EAD\x79\x20\x74\x69\u1EBF\x70\x20\x74\u1EE5\x63\x20\x31\x35\x20\x6E\x67\xE0\x79\x20\x6E\x6F\x66\x61\x70\x20\x76\xE0\x20\x62\u1ECF\x20\x6C\x75\xF4\x6E\x20\x63\u1ED1\x20\x6C\xEA\x6E\x20\x74\xF4\x69\x20\x73\u1EBD\x20\x6C\xE0\x6D\x20\u0111\u01B0\u1EE3\x63\x20\x64\xF9\x20\x63\xF3\x20\x6B\x68\xF3\x20\x6B\x68\u0103\x6E\x20\u0111\u1EBF\x6E\x20\u0111\xE2\x75"];
+  var encode_searchbot=[_0x9124[0],_0x9124[1],_0x9124[2]]
+var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ Adj Trong đó: S (subject): Chủ ngữ N/ Adj (Noun/ Adjective): Danh từ/ tính từ Lưu ý: S = I + am S = He/ She/ It + is S = You/ We/ They + are Ví dụ : My father is a teacher. (Bố tôi là một giáo viên.) They are from Japan. (Họ đến từ Nhật Bản.) I am handsome. (Tôi đẹp trai.)'
+,[null]
 ,'Những người thuộc cung Ma Kết sống theo nguyên tắc, cẩn thận, quy củ, coi trọng các luật lệ và đề phòng trong các mối quan hệ. Bởi vậy trong mắt mọi người, Ma Kết lúc nào cũng nghiêm túc, không hài hước, vui vẻ. Tính cách cung Ma Kết hướng nội. Ban đầu khi giao tiếp, họ sẽ rụt rè, lúng túng và thiếu tự tin. Nếu có ai đó pha vỡ tấm lá chắn ngại ngùng của Ma Kết, họ mới có thể trở nên nhiệt tình hơn. Ma Kết là người tuyệt đối giữ bí mật và kín đáo, họ biết điều gì nên nói và không nên nói. Nếu ai đó nhờ giữ bí mật, Ma Kết sẽ đồng ý và không mấp máy nửa lời. Họ cũng thường giữ kín những mục tiêu và kế hoạch của mình, dù ai có cố gắng nhòm ngó cũng không thể khai thác được thông tin gì.'
 ,'Những người thuộc cung Xử Nữ biểu tượng cho đất, được sao Thủy chiếu mệnh. Họ là người sống có kế hoạch, kỉ luật, khá tỉ mỉ và khắt khe. Họ sẽ không lãng phí bất kì thứ gì đặc biệt là tiền của, dù họ sống trong điều kiện dư dả. Những người này luôn giữ căn nhà của họ thật sạch sẽ, ngăn nắp và trang trí cho nó bằng những phụ kiện lung linh, màu sắc sặc sỡ. Xử Nữ sở hữu sự thông minh, trí tuệ sắc sảo vượt trội. Họ có thể thích hợp với những công việc như: nhà nghiên cứu khoa học, chuyên viên kĩ thuật, chế tạo máy móc…'
 ,'Trường THPT Võ Văn Kiệt được thành lập ngày 28 tháng 11 năm 2018 chính thức đi vào hoạt động từ học kì 2 năm học 2018-2019. Trường đóng trên địa bàn thôn 10 xã Ea Khal, huyện Ea H’leo tỉnh Đắk Lắk. Thực tế trường giáp ranh với thị trấn Ea Drăng (cách thị trấn khoảng 300 m), cách đường Hồ Chí Minh  (Quốc lộ 14) 1,4 Km về phía Tây. Đến nay sau hơn 3 năm xây dựng và phát triển hiện trường có 60 CB, GV,NV với 23 lớp gần 1000 học sinh là con em các xã thị trấn trên toàn huyện theo học. Về cơ sở vật chất: Thuộc top đầu của tỉnh đảm bảo việc học tập và thực hành theo chương trình GDPT năm 2018. Trường có diện tích hơn 3ha với 30 phòng học kiên cố; 5 phòng thí nghiệm. 3 phòng công nghệ mỗi phòng rộng gần 100m2; 3 phòng tin học hiện đại. Hệ thống thư viện và thư viện điện tử 2 phòng; nhà đa năng với sức chứa 600 người; 2 sân bóng rổ; 3 sân bóng chuyền, và đặc biệt có 01 sân bóng cỏ nhân tạo. Về đội ngũ giảng dạy: nhà trường có 3 CBQL, 49 GV đứng lớp, 7 nhân viên; có 7 GV trình độ thạc sĩ, có 07 GV dạy giỏi cấp tỉnh….100% GB,GV đạt chuẩn và trên chuẩn. Về chất lượng giảng dạy: Năm học vừa rồi trường có 01 HS giỏi Tỉnh, 05 huy chương kì thi Olimpic 10/3 (1 Vàng 2 Bạc 2 đồng). Tỷ lệ tốt nghiệp đạt 99,8%. Rất nhiều em đậu vào các trường ĐH chất lượng cả nước như em Thùy Dương ( Y Tây Nguyên) em Hoàng Linh, em Toản (Công nghệ thông tin -ĐHQG TP HCM) em Phương Hà (ĐH Kinh tế TP HCM) em Thanh Thảo (ĐH Kinh tế -Luật) …. Năm học 2022-2023 qui mô trường trên 25 lớp với gần 1200 học sinh. Địa bàn tuyển sinh chính của trường là các xã Ea Nam, Ea Khal, Ea Tir, một phần xã Cư Mốt, xã Ea ral và học sinh học thị trấn Ea Drăng nhưng có hộ khẩu các xã nói trên… Nhà trường kính chúc quí phụ huynh và các em học sinh sức khỏe và lựa chọn ngôi trường này để học tập. Ngôi trường lí tưởng cho các bạn học tập và vui chơi. Chia sẻ bài viết này cho mọi ngưòi biết với nha các ban. Thầy xin cảm ơn'
@@ -158,8 +139,8 @@ function handleMessage(sender_psid, received_message) {
 ,' : Được dịch từ tiếng Anh-Stack Overflow là một trang web hỏi đáp dành cho các lập trình viên chuyên nghiệp và đam mê. Đây là trang web hàng đầu của Mạng lưới trao đổi ngăn xếp, được tạo ra vào năm 2008 bởi Jeff Atwood và Joel Spolsky. Nó có các câu hỏi và câu trả lời về một loạt các chủ đề trong lập trình máy tính.'    
 ,'https://www.facebook.com/Ytttuong1/'
 ,'My shirt : https://shopee.vn/big-sale-ao-khoac-bomber-nam-nut-bam-in-chu-phia-truoc-chat-du-2-lop-mac-chong-nang-di-choi-di-hoc-len-form-nhu-i.394040432.9123409500?af_click_lookback=7d&af_reengagement_window=7d&af_siteid=an_17104620000&af_sub_siteid=119271&af_viewthrough_lookback=1d&atnct1=5737c6ec2e0716f3d8a7a5c4e0de0d9a&atnct2=SIBVa35GASlKD51LxOc9p74hInxlMs0VGUr8MFJDwPYUGu51&atnct3=eWNpx00063d002k13&c=322&is_retargeting=true&pid=affiliates&utm_campaign=&utm_content=SIBVa35GASlKD51LxOc9p74hInxlMs0VGUr8MFJDwPYUGu51-119271-322--&utm_medium=affiliates&utm_source=an_17104620000'
-,'Thất bại tôi đã k no fap được 15 ngày thật kém cỏi, nhưng tôi sẽ k bỏ cuộc đâu vấp thì đứng dậy tiếp tục 15 ngày nofap và bỏ luôn cố lên tôi sẽ làm được dù có khó khăn đến đâu'
-,'Chúc mừng bạn đã no fap 1 ngày thành công hãy chiến thắng chính bản thân mình !'
+,[null]
+,[null]
 ,'https://sinhvientot.net/struct-phan-so/',
 ];
 console.log("number languagefocus : ",SearchBot.length);
@@ -299,7 +280,7 @@ let Uppertoxic = TOXIC.map(element => {
           case"crush":
           case"crush"://information
           case"#mycrush":
-          response={"text": SearchBot[1]+"\nImage My crush : "+SearchBot[23]+"\nprofile crush : "+SearchBot[29],}
+          response={"text": encode_searchbot[0]+"\nImage My crush : "+SearchBot[23]+"\nprofile crush : "+SearchBot[29],}
           break;  
           case"ma kết":
           case"#ma ket":
@@ -1083,12 +1064,12 @@ let Uppertoxic = TOXIC.map(element => {
       break;
       case "No fap":
       case "no fap":
-          response={"text":9,}
+          response={"text":encode_searchbot[2],}
       break;
       case "1 day no fap thành công":
       case "no fap thành công":
       case "No fap thành công":
-            response={"text":SearchBot[39],}
+            response={"text":encode_searchbot[1],}
         break;
       case "web bot":
       case "web bot":

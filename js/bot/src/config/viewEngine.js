@@ -9,9 +9,9 @@ let configViewEngine = (app) => {
 function myapp(){
 
 }
-module.exports = configViewEngine
+module.exports = configViewEngine;
 
-
+//export default configViewEngine;
 
 
 
