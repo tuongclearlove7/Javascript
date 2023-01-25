@@ -92,7 +92,7 @@ var SearchBot = ['Thể khẳng định => Công thức : S + am/ is/ are + N/ A
 ,];
   console.log(SearchBot.length)
   console.log(SearchBot[36])
-  var pass = prompt("nhap pass : ")
+  var pass = prompt("nhap pass : ");
   switch(pass){
     case"hiện tại đơn":
    console.log(SearchBot[0]||SearchBot[1])

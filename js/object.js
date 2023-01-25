@@ -9,7 +9,7 @@ var myobject= {
     address : "dak lak, VN",
    [passkey] : "tuongclearlove7",
     phone : "012345678",
-    getname: function(){
+    getname : function(){
         return /*myobject or this*/this.address;
     },
     getpasskey: function(){
