@@ -117,11 +117,159 @@ gán change(10) cho num + 5 / 3 = */
             console.log(changed)
 
 var processed = 10;
-    function processArg(num){
-        return (num + 5)/5;
-    }
-    processed = processArg(0);
+
+function processArg(num){
+
+    return (num + 5)/5;
+}
+
+processed = processArg(0);
 /*gán processed cho processArg gán processArg(0) cho num + 5 / 5 = */
 console.log(processed)
 
+function wrapValue(n) {
 
+    let local = n;
+
+    return () => local;
+  }
+  
+  let wrap1 = wrapValue("wrap1");
+  let wrap2 = wrapValue("wrap2");
+  
+  console.log(wrap1());
+  console.log(wrap2());
+
+//arrow funtions
+
+const ArrowFunctions = () => { 
+
+    console.log("arrow functions...");
+}
+
+ArrowFunctions();
+
+// arrow functions with argument
+
+const arrowFunction = (arrow) => {
+
+    console.log(arrow);
+}  
+
+arrowFunction("arrow functions with argument");
+
+
+// arrow functions with arguments
+
+
+const arrowFunctions = (...arrows) => {
+
+    let string  = "";
+
+    for (var i = 0; i < arrows.length; i++){
+
+        string = string + arrows[i];
+
+    }
+
+    return string;
+}
+
+console.log(arrowFunctions("tuong",16,1,2002));//string concatenation (nối chuỗi chuyển vào)
+
+// ife function
+
+
+const privateApp = (
+
+    function(){
+
+        const data = [];
+
+        console.log(data);
+
+            return {
+
+                set(...value){
+            
+                    for (var i = 0; i < value.length; i++){
+                        
+                        data.push(value[i]);
+                    }
+                },
+
+                get(index){
+                        
+                    for (var i = 0; i < data.length; i++){
+
+                        if(index === i){
+
+                            break;
+
+                            return data[i];
+                        }
+                    }
+
+                    return data[index];
+                },
+
+                gets_Tostring(){
+
+                    var toString = "";
+
+                    for (var i = 0; i < data.length; i++){
+
+                        toString = toString + data[i];
+                    } 
+
+                    return toString;
+                },
+
+                delete_toIndex(index){
+
+                    delete data[index];
+                    
+                },
+
+                gets(){
+
+                    for (var i = 0; i < data.length; i++){
+
+                            console.log(data[i]);
+                    }
+                },
+
+                get_index(value) { 
+            
+                    return data.indexOf(value); 
+                }
+            }
+        }
+)();
+
+console.log(privateApp);
+privateApp.set(16,1,2002,"_tuong");
+console.log(privateApp.gets_Tostring());// to string
+privateApp.gets();
+
+var obj  = [
+    
+    privateApp.get_index(16),
+    privateApp.get_index(1),
+    privateApp.get_index(2002),
+    privateApp.get_index("_tuong"),
+];
+
+console.log("index : " + obj);
+
+for (var i = 0; i < obj.length; i++){
+
+    console.log(privateApp.get(obj[i]));
+}
+
+
+
+
+
+  
+ 

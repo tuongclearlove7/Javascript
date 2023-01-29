@@ -19,6 +19,26 @@ for (var i = 0; i <=100; i += 5){
 }
 
 
+function * powers(n) {
+
+    for (let current = n;; current *= n) {
+
+            yield current;
+
+    }
+}
+  
+for (let power of powers(3)) {
+
+    if (power > 100){
+
+        break;
+    } 
+
+    console.log(power);
+}
+
+
 
 
 
