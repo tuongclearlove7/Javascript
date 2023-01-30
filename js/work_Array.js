@@ -41,7 +41,7 @@ var my_list = [
 //phuong thuc method forEach()
 my_list.forEach(function(my_list, index){
     // index duyet qua tung phan tu cua mang
-    console.log(index,my_list)
+    console.log(my_list)
 });
 // phuong thuc every()
 var isfree = my_list.every(function(my_lists,index){
@@ -102,7 +102,7 @@ console.log([1, 2, 3, 2, 1].lastIndexOf(2));
 
 console.log([0, 1, 2, 3, 4].slice(2, 4));
 
-console.log([0, 1, 2, 3, 4].slice(2));
+console.log("slice : "+[0, 1, 2, 3, 4].slice(3));
 
 
 function repeat(n, action) {
@@ -113,11 +113,11 @@ function repeat(n, action) {
     }
 }
 
-repeat(3, console.log);
+repeat(5, console.warn);
 
 let labels = [];
 
-repeat(5, i => {
+repeat(10, i => {
 
     labels.push(`Unit ${i + 1}`);
 });
@@ -145,6 +145,20 @@ function reduce(array, combine, start) {
 //sum elements in array
 console.log(reduce([10,10,10,10], (a, b) => a + b, 10));
     
+
+function remove(index) {
+
+    var array = ["a", "b", "c", "d", "e"];
+
+    return array.slice(0, index).concat(array.slice(index + 1));
+}
+
+
+
+console.log(remove(2));
+
+
+
 
 
 

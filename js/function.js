@@ -159,7 +159,27 @@ const arrowFunction = (arrow) => {
 arrowFunction("arrow functions with argument");
 
 
-// arrow functions with arguments
+// arrow functions with rest arguments
+
+function max(...numbers) {
+
+        let result = 0;
+
+        for (let number of numbers) {
+
+            if (number > result){
+
+                result = number;
+            } 
+        }
+        
+        return result;
+}
+console.log("max : " + max(4, 1, 9, -2, -4, -6));
+
+let numbers = [5, 1, 7];
+
+console.log(max(...numbers));
 
 
 const arrowFunctions = (...arrows) => {
@@ -230,6 +250,11 @@ const privateApp = (
                     delete data[index];
                     
                 },
+                remove(index) {
+                
+                    return data.slice(0, index).concat(data.slice(index + 1));
+                }
+                ,
 
                 gets(){
 
@@ -251,6 +276,9 @@ console.log(privateApp);
 privateApp.set(16,1,2002,"_tuong");
 console.log(privateApp.gets_Tostring());// to string
 privateApp.gets();
+console.log("remove element : " + privateApp.remove(0));
+var size = privateApp.remove(0).length;
+console.log(size);
 
 var obj  = [
     
