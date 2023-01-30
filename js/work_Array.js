@@ -105,7 +105,47 @@ console.log([0, 1, 2, 3, 4].slice(2, 4));
 console.log([0, 1, 2, 3, 4].slice(2));
 
 
+function repeat(n, action) {
+
+    for (let i = 0; i < n; i++) {
+
+        action(i);
+    }
+}
+
+repeat(3, console.log);
+
+let labels = [];
+
+repeat(5, i => {
+
+    labels.push(`Unit ${i + 1}`);
+});
+
+console.log(labels);
+
+for (let i = 0; i < labels.length; i++) {
+
+    console.log(labels[i]);
+}
+
+function reduce(array, combine, start) {
+
+    let current = start;
+
+    for (let element of array) {
+
+        current = combine(current, element);
+
+    }
+
+    return current;
+    
+}
+//sum elements in array
+console.log(reduce([10,10,10,10], (a, b) => a + b, 10));
+    
 
 
 
-
+    
